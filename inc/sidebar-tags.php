@@ -23,6 +23,5 @@
         foreach( $wptc as $wpt ) echo "<li>" . $wpt . "</li>\n"; 
       ?>
     </ul>
-    </ul>
   </div>
 </div>
