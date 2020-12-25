@@ -9,6 +9,10 @@ body {
 body .container .row .column.layout__content {
   padding-bottom: 3rem;
 }
+body .container .row .column.layout__content img {
+  max-width: 100%;
+  height: auto;
+}
 .container {
   background-color: var(--body-background-color);
 }
