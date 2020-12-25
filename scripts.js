@@ -14,16 +14,19 @@ function getElementHeight(el) {
 }
 
 function initLayoutVisiblityToggler() {
+  const opendIcon = "fa-angle-up";
+  const closedIcon = "fa-angle-down";
+
   document
   .querySelectorAll("div[data-toggle-id]")
-  .forEach(iconContainer => {
+  .forEach(container => {
     const icon = document.createElement("i");
-    icon.classList.add("fas", "fa-eye");
-    icon.style.cursor = "pointer";
+    icon.classList.add("fas");
+    container.style.cursor = "pointer";
 
-    iconContainer.appendChild(icon);
+    container.appendChild(icon);
 
-    const idEl = iconContainer.dataset.toggleId;
+    const idEl = container.dataset.toggleId;
     if (!idEl) {
       return;
     }
@@ -44,8 +47,8 @@ function initLayoutVisiblityToggler() {
         opacity: isVisible ? 1 : 0
       };
 
-      icon.classList.remove(isVisible ? "fa-eye-slash" : "fa-eye");
-      icon.classList.add(isVisible ? "fa-eye" : "fa-eye-slash");
+      icon.classList.remove(isVisible ? closedIcon : opendIcon);
+      icon.classList.add(isVisible ? opendIcon : closedIcon);
 
       if (anim) {
         const animation = el.animate([newStyle], {
@@ -68,7 +71,7 @@ function initLayoutVisiblityToggler() {
 
 
     update(false);
-    iconContainer.addEventListener("click", () => {
+    container.addEventListener("click", () => {
       toggle(true);
     });
   });

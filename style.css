@@ -67,6 +67,31 @@ body h3 {
   line-height: 1.35;
 }
 
+a:not(.button) {
+  position: relative;
+  border-bottom: 1px solid var(--body-border-color);
+}
+a:not(.button):after {
+  position: absolute;
+  content: '';
+  bottom: -1px;
+  left: 0;
+  right: 100%;
+  height: 1px;
+  background-color: var(--text-color);
+  transition: right ease-in-out 200ms;
+}
+a:not(.button):hover:after {
+  right: 0;
+}
+.header-menu a {
+  border-bottom: none;
+}
+
+.current-menu-item {
+  font-weight: bold;
+}
+
 .layout__nav__visiblity-flex {
   display: flex;
 }
@@ -108,10 +133,10 @@ ul.header-menu li {
   margin-bottom: 0;
 }
 
-ul.header-categories, ul.header-tags, ul.header-archive, ul.post-comments {
+ul.header-categories, ul.header-tags, ul.header-archive, ul.post-comments, .wp-block-archives-list.wp-block-archives {
   padding-left: 0;
 }
-ul.header-categories li, ul.header-tags li, ul.header-archive li, ul.post-comments li {
+ul.header-categories li, ul.header-tags li, ul.header-archive li, ul.post-comments li, .wp-block-archives-list.wp-block-archives li {
   list-style: none;
   margin-bottom: 0;
 }
@@ -131,6 +156,10 @@ body button.button-social.button-outline, body a.button-social.button-outline {
   margin-bottom: 2rem;
   color: #777;
   border-color: #777;
+}
+
+.navigation.pagination {
+  margin-top: 2rem;
 }
 
 .tag-item {
@@ -153,8 +182,6 @@ body button.button-social.button-outline, body a.button-social.button-outline {
 }
 .post-date {
   font-size: .8125em;
-}
-h3 + .post-date {
   margin-top: -2rem;
   margin-bottom: 2rem;
 }
