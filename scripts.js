@@ -41,7 +41,7 @@ function initLayoutVisiblityToggler() {
     const height = getElementHeight(el);
     el.style.overflowY = "hidden";
     
-    const update = (anim) => {
+    const update = async (anim) => {
       const newStyle = {
         height: isVisible ? `${height}px` : 0,
         opacity: isVisible ? 1 : 0
@@ -58,8 +58,11 @@ function initLayoutVisiblityToggler() {
         });
 
         animation.play();
+        await animation.finished;
+        setLayoutNavPosition();
       } else {
         Object.assign(el.style, newStyle);
+        setLayoutNavPosition();
       }
 
       localStorage.setItem(idEl, isVisible);
@@ -78,7 +81,7 @@ function initLayoutVisiblityToggler() {
 }
 
 function initNavToggler() {
-  const navTogglerEl = document.getElementById("nav-toggler");
+  const navTogglerEl = document.getElementById("nav-mobile-toggler");
   if (!navTogglerEl) {
     return;
   }
@@ -118,9 +121,45 @@ function initCreatePostCommand() {
   });
 }
 
-let layoutNavSplitterTopSet = false;
-function setLayoutNavSplitterTop() {
-  if (layoutNavSplitterTopSet) {
+let layoutNavEl;
+let layoutNavFillerEl;
+function setLayoutNavPosition() {
+  if (!layoutNavEl) {
+    layoutNavEl = document.querySelector(".layout__nav__sticky");
+  }
+  if (!layoutNavEl) {
+    return;
+  }
+
+  if (!layoutNavFillerEl) {
+    layoutNavFillerEl = document.querySelector(".layout__nav__sticky__filler");
+  }
+  if (!layoutNavFillerEl) {
+    return;
+  }
+
+  const navBottom = layoutNavEl.scrollTop + layoutNavEl.offsetHeight;
+  const windowHeight = window.innerHeight;
+  const windowBottom = windowHeight + window.scrollY;
+  
+  if (navBottom <= windowHeight || window.scrollY == 0) {
+    layoutNavEl.classList.remove("layout__nav__sticky--bottom");
+    layoutNavEl.classList.add("layout__nav__sticky--top");
+    layoutNavFillerEl.classList.remove("layout__nav__sticky__filler--active");
+  } else if (navBottom < windowBottom) {
+    layoutNavEl.classList.remove("layout__nav__sticky--top");
+    layoutNavFillerEl.classList.add("layout__nav__sticky__filler--active");
+    layoutNavEl.classList.add("layout__nav__sticky--bottom");
+  } else {
+    layoutNavFillerEl.classList.remove("layout__nav__sticky__filler--active");
+    layoutNavEl.classList.remove("layout__nav__sticky--bottom");
+    layoutNavEl.classList.remove("layout__nav__sticky--top");
+  }
+}
+
+let layoutNavMobileSplitterTopSet = false;
+function setLayoutNavMobileSplitterTop() {
+  if (layoutNavMobileSplitterTopSet) {
     return;
   }
 
@@ -134,22 +173,29 @@ function setLayoutNavSplitterTop() {
     return;
   }
 
-  const top = navMobileStickyEl.offsetTop + navMobileStickyEl.offsetHeight;
-  if (!top) {
+  const clientRect = navMobileStickyEl.getBoundingClientRect();
+  const splitterTop = clientRect.top + clientRect.height;
+  if (!splitterTop) {
     return;
   }
 
-  navSplitterEl.style.top = `${top}px`;
-  layoutNavSplitterTopSet = true;
+  navSplitterEl.style.top = `${splitterTop}px`;
+  layoutNavMobileSplitterTopSet = true;
 }
 
 window.addEventListener("DOMContentLoaded", () => {
   initLayoutVisiblityToggler();
   initNavToggler();
   initCreatePostCommand();
-  setLayoutNavSplitterTop();
+  setLayoutNavPosition();
+  setLayoutNavMobileSplitterTop();
 });
 
 window.addEventListener("resize", () => {
-  setLayoutNavSplitterTop();
+  setLayoutNavMobileSplitterTop();
+  setLayoutNavPosition();
 });
+
+window.addEventListener("scroll", () => {
+  setLayoutNavPosition();
+})

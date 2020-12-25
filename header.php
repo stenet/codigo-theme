@@ -8,15 +8,16 @@
   <body <?php body_class();?> <?php get_body_style();?>>
     <div class="container">
       <div class="row">
-        <div class="row layout__nav-mobile__sticky">
+        <div class="layout__nav-mobile__sticky">
           <div class="column">
-            <div class="layout__nav__visiblity-flex">
+            <div id="nav-mobile-toggler" class="layout__nav__visiblity-flex">
               <h1><?php echo get_bloginfo('name');?></h1>
-              <i id="nav-toggler" class="fas fa-bars"></i>
+              <i class="fas fa-bars"></i>
             </div>
           </div>
         </div>
         <div class="column column-25 layout__nav">
+          <div class="layout__nav__sticky__filler"></div>
           <div class="row layout__nav__sticky">
             <div class="column">
               <?php include(get_template_directory() . '/inc/sidebar-header.php');?>              

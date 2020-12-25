@@ -15,6 +15,8 @@ body .container .row .column.layout__content {
 
 @media (min-width: 1000px) {
   body .container .row .column.layout__nav {
+    display: flex;
+    flex-direction: column;
     padding-top: 3rem;
     padding-bottom: 3rem;
     padding-left: 2rem;
@@ -34,8 +36,23 @@ body .container .row .column.layout__content {
     background-color: initial;
   }
   .layout__nav__sticky {
+    position: static;
+  }
+  .layout__nav__sticky.layout__nav__sticky--top {
     position: sticky;
     top: 3rem;
+  }
+  .layout__nav__sticky.layout__nav__sticky--bottom {
+    position: sticky;
+    bottom: 3rem;
+  }
+  .layout__nav__sticky__filler {
+    display: none;
+    flex-grow: 1;
+  }
+  .layout__nav__sticky__filler--active {
+    display: block;
+    flex-grow: 1;
   }
   .layout__nav-mobile__sticky {
     display: none;
@@ -104,12 +121,13 @@ a:not(.button):hover:after {
 
 .layout__nav-mobile__sticky {
   position: sticky;
+  z-index: 1;
   top: 0;
   padding-top: 3rem;
   background-color: var(--body-background-color);
 }
 
-#nav-toggler {
+#nav-mobile-toggler i {
   font-size: 2.8rem;
   line-height: 1.6;
 }
