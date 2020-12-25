@@ -10,13 +10,10 @@
       <div class="row">
         <div class="layout__nav-mobile__sticky">
           <div class="column">
-            <div id="nav-mobile-toggler" class="layout__nav__visiblity-flex">
-              <h1><?php echo get_bloginfo('name');?></h1>
-              <i class="fas fa-bars"></i>
-            </div>
+            <?php include(get_template_directory() . '/inc/sidebar-header-mobile.php');?>    
           </div>
         </div>
-        <div class="column column-25 layout__nav">
+        <header class="column column-25 layout__nav">
           <div class="layout__nav__sticky__filler"></div>
           <div class="row layout__nav__sticky">
             <div class="column">
@@ -26,7 +23,7 @@
               <?php include(get_template_directory() . '/inc/sidebar-archive.php');?>              
             </div>
           </div>
-        </div>
+        </header>
         <div class="layout__nav-splitter">
         </div>
         <div class="column layout__content">

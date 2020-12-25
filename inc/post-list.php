@@ -1,5 +1,5 @@
 <?php if (have_posts()) : while(have_posts()) : the_post();?>
-<div class="blog-post__item">
+<article class="blog-post__item">
   <div class="row">
     <div class="column">
       <h3><?php the_title();?></h3>
@@ -16,7 +16,7 @@
       <a href="<?php the_permalink();?>" class="button button-outline">Beitrag anzeigen</a>
     </div>
   </div>
-</div>
+</article>
 <?php endwhile;?>
 <div class="row">
   <div class="column">
