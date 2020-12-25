@@ -157,42 +157,14 @@ function setLayoutNavPosition() {
   }
 }
 
-let layoutNavMobileSplitterTopSet = false;
-function setLayoutNavMobileSplitterTop() {
-  if (layoutNavMobileSplitterTopSet) {
-    return;
-  }
-
-  const navSplitterEl = document.querySelector(".layout__nav-splitter");
-  if (!navSplitterEl) {
-    return;
-  }
-  
-  const navMobileStickyEl = document.querySelector(".layout__nav-mobile__sticky");
-  if (!navMobileStickyEl) {
-    return;
-  }
-
-  const clientRect = navMobileStickyEl.getBoundingClientRect();
-  const splitterTop = clientRect.top + clientRect.height;
-  if (!splitterTop) {
-    return;
-  }
-
-  navSplitterEl.style.top = `${splitterTop}px`;
-  layoutNavMobileSplitterTopSet = true;
-}
-
 window.addEventListener("DOMContentLoaded", () => {
   initLayoutVisiblityToggler();
   initNavToggler();
   initCreatePostCommand();
   setLayoutNavPosition();
-  setLayoutNavMobileSplitterTop();
 });
 
 window.addEventListener("resize", () => {
-  setLayoutNavMobileSplitterTop();
   setLayoutNavPosition();
 });
 

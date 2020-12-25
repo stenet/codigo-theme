@@ -15,7 +15,7 @@
         </div>
         <header class="column column-25 layout__nav">
           <div class="layout__nav__sticky__filler"></div>
-          <div class="row layout__nav__sticky">
+          <div class="layout__nav__sticky">
             <div class="column">
               <?php include(get_template_directory() . '/inc/sidebar-header.php');?>              
               <?php include(get_template_directory() . '/inc/sidebar-categories.php');?>              
@@ -24,8 +24,6 @@
             </div>
           </div>
         </header>
-        <div class="layout__nav-splitter">
-        </div>
         <div class="column layout__content">
 
 

@@ -1,15 +1,16 @@
 <?php
 
 function load_stylesheets() {
+  wp_register_style("variables", get_template_directory_uri() . "/variables.css");
+
   wp_register_style("font", "https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic");
   wp_register_style("normalize", "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
-  wp_register_style("milligram", get_template_directory_uri() . "/milligram-custom.css", array("font", "normalize"));
-  wp_enqueue_style("milligram");
+  wp_register_style("milligram", get_template_directory_uri() . "/milligram-custom.css", array("font", "normalize", "variables"));
     
   wp_register_style("fontawesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
   wp_enqueue_style("fontawesome");
 
-  wp_register_style("style", get_template_directory_uri() . "/style.css");
+  wp_register_style("style", get_template_directory_uri() . "/style.css", array("variables", "milligram", "fontawesome"));
   wp_enqueue_style("style");
 }
 
