@@ -39,6 +39,11 @@ body .container .row .column.layout__content img {
   font-size: 2.2rem;
   line-height: 1.35;
 }
+.layout__nav-mobile__icon {
+  width: 40px;
+  height: 40px;
+  margin: -1rem 1rem -1rem -1rem;
+}
 
 #nav-mobile-toggler i {
   font-size: 2rem;
@@ -48,10 +53,10 @@ body .container .row .column.layout__content img {
 .layout__nav__visiblity-flex {
   display: flex;
 }
-.layout__nav__visiblity-flex *:nth-child(1) {
+.layout__nav__visiblity-flex h1, .layout__nav__visiblity-flex h2, .layout__nav__visiblity-flex h3, .layout__nav__visiblity-flex h4, .layout__nav__visiblity-flex h5, .layout__nav__visiblity-flex h6 {
   flex-grow: 1;
 }
-.layout__nav__visiblity-flex *:nth-child(2) {
+.layout__nav__visiblity-flex i {
   line-height: 2em;
 }
 
