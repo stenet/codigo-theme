@@ -1,7 +1,7 @@
 <div class="row">
   <div class="column">
     <div class="layout__nav__visiblity-flex" data-toggle-id="layout-nav-archive">
-      <h3>Archiv</h3>
+      <h3 class="layout__nav__visiblity-flex--grow">Archiv</h3>
     </div>
   </div>
 </div>
