@@ -23,6 +23,26 @@ body .container .row .column.layout__content img {
 .layout__nav__sticky {
   background-color: var(--nav-background-color);
 }
+.layout__nav__icon__container {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.layout__nav__icon {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.layout__nav__icon__container h1 {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(242, 242, 242, .85);
+  border-top: 1px solid var(--body-border-color);
+  border-bottom: 1px solid var(--body-border-color);
+  margin: 0;
+  padding: 1rem 0;
+  font-weight: bold;
+}
 
 .layout__nav-mobile__sticky {
   position: sticky;
