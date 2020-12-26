@@ -139,7 +139,7 @@ body .container .row .column.layout__content img {
     padding: 2rem 2rem 0 2rem;
     border-bottom: 1px solid var(--body-border-color);
   }
-  .layout__nav__sticky h1 {
+  .layout__nav__icon__container {
     display: none;
   }
   .row .column.layout__content {
