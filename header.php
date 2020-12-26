@@ -17,12 +17,10 @@
           <header class="column column-25 layout__nav">
             <div class="layout__nav__sticky__filler"></div>
             <div class="layout__nav__sticky">
-              <div class="column">
-                <?php include(get_template_directory() . '/inc/sidebar-header.php');?>              
-                <?php include(get_template_directory() . '/inc/sidebar-categories.php');?>              
-                <?php include(get_template_directory() . '/inc/sidebar-tags.php');?>              
-                <?php include(get_template_directory() . '/inc/sidebar-archive.php');?>              
-              </div>
+              <?php include(get_template_directory() . '/inc/sidebar-header.php');?>              
+              <?php include(get_template_directory() . '/inc/sidebar-categories.php');?>              
+              <?php include(get_template_directory() . '/inc/sidebar-tags.php');?>              
+              <?php include(get_template_directory() . '/inc/sidebar-archive.php');?>              
             </div>
           </header>
           <div class="column layout__content">

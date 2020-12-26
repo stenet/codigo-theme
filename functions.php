@@ -15,6 +15,12 @@ function load_stylesheets() {
 }
 
 function load_javascripts() {
+  wp_register_script("wc-skill", get_template_directory_uri() . "/wc-skill.js");
+  wp_enqueue_script("wc-skill");
+
+  wp_register_script("wc-tag", get_template_directory_uri() . "/wc-tag.js");
+  wp_enqueue_script("wc-tag");
+
   wp_register_script("scripts", get_template_directory_uri() . "/scripts.js");
   wp_enqueue_script("scripts");
 }

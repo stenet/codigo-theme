@@ -2,7 +2,7 @@
 <article class="blog-post__item">
   <div class="row">
     <div class="column">
-      <h3><?php the_title();?></h3>
+      <h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
       <?php if (get_post_type() === 'post') : ?><div class="post-date"><?php echo get_the_date();?></div><?php endif;?>
     </div>
   </div>
