@@ -11,7 +11,6 @@ class WcTag extends HTMLElement {
       <style>
         :host {
           display: inline-block;
-          margin-right: 0.5rem;
           margin-bottom: 1rem;
         }
         :host > div {
