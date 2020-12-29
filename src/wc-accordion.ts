@@ -21,9 +21,18 @@ class WcAccordion extends HTMLElement {
       this._localStorageKey = `accordion-${this.id}`;
     }
 
-    this._isContentVisible = this._localStorageKey
-      ? localStorage.getItem(this._localStorageKey) == true.toString()
-      : false;
+    const isDefaultOpen = this.getAttribute("accordion-default") == "open";
+
+    if (this._localStorageKey) {
+      const val = localStorage.getItem(this._localStorageKey);
+      if (val == void(0)) {
+        this._isContentVisible = isDefaultOpen;
+      } else {
+        this._isContentVisible = val == true.toString();
+      }
+    } else {
+      this._isContentVisible = isDefaultOpen;
+    }
 
     const accordionText = this.getAttribute("accordion-text") || "";
     
@@ -39,7 +48,7 @@ class WcAccordion extends HTMLElement {
     
     const text = document.createElement("div");
     header.appendChild(text);
-    text.classList.add("flex-grow", "text-xl");
+    text.classList.add("flex-grow", "group");
     text.innerText = accordionText;
     
     this._angle = document.createElement("i");

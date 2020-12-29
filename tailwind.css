@@ -34,28 +34,6 @@ h3 {
   @apply text-xl;
 }
 
-a {
-  @apply text-primary;
-}
-a:hover {
-  @apply text-text;
-}
-a:not(.plain) {
-  @apply border-b border-border relative;
-}
-a:not(.plain)::after {
-  @apply absolute bg-text;
-  content: "";
-  bottom: -1px;
-  left: 0;
-  right: 100%;
-  height: 1px;
-  transition: right ease-in-out .2s;
-}
-a:not(.plain):hover::after {
-  right: 0;
-}
-
 p {
   @apply mb-6;
 }
@@ -70,6 +48,16 @@ ul > li {
 /* =======================================================
 Header
 ======================================================= */
+
+header a {
+  @apply text-nav-text-a;
+}
+header a:hover {
+  @apply text-nav-text;
+}
+a:not(.plain) {
+  @apply border-none;
+}
 
 header.mobile-nav--active {
   @apply fixed top-0 left-0 right-0 bottom-0;
@@ -86,7 +74,14 @@ header .nav-main.nav-main--bottom {
 }
 
 header .button-social {
-  @apply border border-text rounded-full flex items-center justify-center w-8 h-8;
+  @apply text-nav-text-a flex items-center justify-center w-8 h-8;
+}
+header .button-social:hover {
+  @apply text-nav-text;
+}
+
+header .group {
+  @apply uppercase text-sm font-bold;
 }
 
 header .current-menu-item a {
@@ -120,10 +115,32 @@ article input:focus:not([type='checkbox']):not([type='submit']), article textare
 }
 
 article button, article input[type='button'], article input[type='submit'] {
-  @apply appearance-none px-6 py-3 bg-primary border border-primary uppercase rounded-md text-white font-bold text-xs cursor-pointer;
+  @apply appearance-none px-6 py-3 bg-nav-input border border-nav-input uppercase rounded-md text-white font-bold text-xs cursor-pointer;
 }
 article pre {
-  @apply border-l-2 border-primary bg-nav-bg p-4 mb-6 text-sm;
+  @apply border-l-2 border-primary bg-border p-4 mb-6 text-sm;
+}
+
+article a {
+  @apply text-primary;
+}
+article a:hover {
+  @apply text-text;
+}
+article a:not(.plain) {
+  @apply border-b border-border relative;
+}
+article a:not(.plain)::after {
+  @apply absolute bg-text;
+  content: "";
+  bottom: -1px;
+  left: 0;
+  right: 100%;
+  height: 1px;
+  transition: right ease-in-out .2s;
+}
+article a:not(.plain):hover::after {
+  right: 0;
 }
 
 /* =======================================================

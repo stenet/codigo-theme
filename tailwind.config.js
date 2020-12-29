@@ -31,9 +31,10 @@ module.exports = {
         "sans": ["Roboto", "'Helvetica Neue'", "Helvetica", "Arial", "'sans-serif'"]
       },
       colors: {
-        "nav-mobile-bg": "#444444",
-        "nav-mobile-text": "#FFFFFF",
-        "nav-bg": "#F2F2F2",
+        "nav-bg": "#444444",
+        "nav-text": "#f0f7fc",
+        "nav-text-a": "#c9d1d9",
+        "nav-input": "#222222",
         "content-bg": "#F8F8F8",
         "border": "#DDDDDD",
         "text": "#606c76",
