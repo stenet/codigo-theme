@@ -9,6 +9,10 @@
   --yellow: #ffab00;
 }
 
+/* =======================================================
+General
+======================================================= */
+
 html {
   font-size: 16px;
 }
@@ -30,16 +34,16 @@ h3 {
   @apply text-xl;
 }
 
-a:not(.button) {
+a {
   @apply text-primary;
 }
-a:not(.button):hover {
+a:hover {
   @apply text-text;
 }
-a:not(.button):not(.plain) {
+a:not(.plain) {
   @apply border-b border-border relative;
 }
-a:not(.button):not(.button-social):not(.plain)::after {
+a:not(.plain)::after {
   @apply absolute bg-text;
   content: "";
   bottom: -1px;
@@ -48,7 +52,7 @@ a:not(.button):not(.button-social):not(.plain)::after {
   height: 1px;
   transition: right ease-in-out .2s;
 }
-a:not(.button):not(.button-social):not(.plain):hover::after {
+a:not(.plain):hover::after {
   right: 0;
 }
 
@@ -62,6 +66,36 @@ ul {
 ul > li {
   @apply mb-1;
 }
+
+/* =======================================================
+Header
+======================================================= */
+
+header.mobile-nav--active {
+  @apply fixed top-0 left-0 right-0 bottom-0;
+}
+
+header .nav-main__filler--active {
+  @apply flex-grow;
+}
+header .nav-main.nav-main--top {
+  @apply sticky top-8;
+}
+header .nav-main.nav-main--bottom {
+  @apply sticky bottom-8;
+}
+
+header .button-social {
+  @apply border border-text rounded-full flex items-center justify-center w-8 h-8;
+}
+
+header .current-menu-item a {
+  @apply font-bold;
+}
+
+/* =======================================================
+Article 
+======================================================= */
 
 article ul {
   @apply list-inside list-square;
@@ -85,46 +119,16 @@ article input:focus:not([type='checkbox']):not([type='submit']), article textare
   @apply border border-black;
 }
 
-article button, article input[type='button'], article input[type='submit'], a.button {
+article button, article input[type='button'], article input[type='submit'] {
   @apply appearance-none px-6 py-3 bg-primary border border-primary uppercase rounded-md text-white font-bold text-xs cursor-pointer;
 }
-pre {
+article pre {
   @apply border-l-2 border-primary bg-nav-bg p-4 mb-6 text-sm;
 }
 
-.mobile-nav--active {
-  @apply fixed top-0 left-0 right-0 bottom-0;
-}
-
-.nav-main__filler--active {
-  @apply flex-grow;
-}
-.nav-main.nav-main--top {
-  @apply sticky top-8;
-}
-.nav-main.nav-main--bottom {
-  @apply sticky bottom-8;
-}
-
-.button-social {
-  @apply border border-text rounded-full flex items-center justify-center;
-  width: 2em;
-  height: 2em;
-}
-
-.current-menu-item a {
-  @apply font-bold;
-}
-
-.searchform > div {
-  @apply flex flex-col space-y-2;
-}
-.searchform .screen-reader-text {
-  @apply font-bold;
-}
-.searchform input[type='submit'] {
-  @apply self-start;
-}
+/* =======================================================
+Comments 
+======================================================= */
 
 .comment-form input:not([type='checkbox']):not([type='button']):not([type='submit']), .comment-form textarea {
   @apply w-full;

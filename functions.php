@@ -64,7 +64,7 @@ function get_social_media() {
     }
 
     $icon = $social_sites[$social_site];
-    $result = $result . "<a rel='noopener noreferrer' href='{$social_site_url}' target='_blank' class='button-social'><i class='{$icon}'></i></a>";
+    $result = $result . "<a rel='noopener noreferrer' href='{$social_site_url}' target='_blank' class='button-social plain'><i class='{$icon}'></i></a>";
   }
 
   echo $result;

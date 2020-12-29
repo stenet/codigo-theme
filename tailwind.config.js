@@ -30,22 +30,8 @@ module.exports = {
       fontFamily: {
         "sans": ["Roboto", "'Helvetica Neue'", "Helvetica", "Arial", "'sans-serif'"]
       },
-      fontSize: {
-        "xs-e": ".75em",
-        "sm-e": ".875em",
-        "tiny-e": ".875em",
-        "base-e": "1em",
-        "lg-e": "1.125em",
-        "xl-e": "1.25em",
-        "2xl-e": "1.5em",
-        "3xl-e": "1.875em",
-        "4xl-e": "2.25em",
-        "5xl-e": "3em",
-        "6xl-e": "4em",
-        "7xl-e": "5em"
-      },
       colors: {
-        "nav-mobile-bg": "#6B7280",
+        "nav-mobile-bg": "#444444",
         "nav-mobile-text": "#FFFFFF",
         "nav-bg": "#F2F2F2",
         "content-bg": "#F8F8F8",
