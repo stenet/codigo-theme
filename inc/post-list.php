@@ -1,34 +1,21 @@
-<?php if (have_posts()) : while(have_posts()) : the_post();?>
-<article class="blog-post__item">
-  <div class="row">
-    <div class="column">
-      <h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-      <?php if (get_post_type() === 'post') : ?><div class="post-date"><?php echo get_the_date();?></div><?php endif;?>
-    </div>
-  </div>
-  <div class="row">
-    <div class="column">
-      <?php the_excerpt();?>
-    </div>
-  </div>
-  <div class="row">
-    <div class="column">
-      <a href="<?php the_permalink();?>" class="button button-outline">Beitrag anzeigen</a>
-    </div>
-  </div>
-</article>
-<?php endwhile;?>
-<div class="row">
-  <div class="column">
-    <?php the_posts_pagination(array(
-      'screen_reader_text' => 'Navigation'
-    ));?>
-  </div>
-</div>
-<?php else :?>
-<div class="row">
-  <div class="column">
+<div class="space-y-8 divide-y divide-border -mt-8">
+  <?php if (have_posts()) : while(have_posts()) : the_post();?>
+  <article class="pt-8">
+    <h2><?php the_title();?></h2>
+    <?php if (get_post_type() === 'post') : ?><div class="-mt-6 mb-6 text-sm"><?php echo get_the_date();?></div><?php endif;?>
+
+    <?php the_excerpt();?>
+    
+    <a class="plain" href="<?php the_permalink();?>">Beitrag anzeigen <i class="fas fa-arrow-right"></i></a>
+  </article>
+  <?php endwhile;?>
+
+  <?php the_posts_pagination(array(
+    'screen_reader_text' => 'Navigation'
+  ));?>
+  <?php else :?>
+  <div>
     Es wurden keine Beiträge gefunden
   </div>
+  <?php endif;?>
 </div>
-<?php endif;?>

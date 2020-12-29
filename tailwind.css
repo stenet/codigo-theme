@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green: #4caf4f;
+  --red: #f44336;
+  --blue: #2096f3;
+  --yellow: #ffab00;
+}
+
+html {
+  font-size: 16px;
+}
+html, body {
+  @apply text-text;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply mb-6 tracking-tighter;
+}
+h1 {
+  @apply text-4xl;
+}
+h2 {
+  @apply text-2xl;
+}
+h3 {
+  @apply text-xl;
+}
+
+a:not(.button) {
+  @apply text-primary;
+}
+a:not(.button):hover {
+  @apply text-text;
+}
+a:not(.button):not(.plain) {
+  @apply border-b border-border relative;
+}
+a:not(.button):not(.button-social):not(.plain)::after {
+  @apply absolute bg-text;
+  content: "";
+  bottom: -1px;
+  left: 0;
+  right: 100%;
+  height: 1px;
+  transition: right ease-in-out .2s;
+}
+a:not(.button):not(.button-social):not(.plain):hover::after {
+  right: 0;
+}
+
+p {
+  @apply mb-6;
+}
+
+ul {
+  @apply mb-5;
+}
+ul > li {
+  @apply mb-1;
+}
+
+article ul {
+  @apply list-inside list-square;
+}
+
+article label {
+  @apply block font-bold mb-2;
+}
+article input + label {
+  @apply inline-block ml-2;
+}
+
+article input:not([type='checkbox']):not([type='button']):not([type='submit']), article textarea {
+  @apply appearance-none px-2 py-1 bg-white text-text border border-border rounded-md;
+}
+
+article input, article textarea {
+  @apply outline-none;
+}
+article input:focus:not([type='checkbox']):not([type='submit']), article textarea:focus {
+  @apply border border-black;
+}
+
+article button, article input[type='button'], article input[type='submit'], a.button {
+  @apply appearance-none px-6 py-3 bg-primary border border-primary uppercase rounded-md text-white font-bold text-xs cursor-pointer;
+}
+pre {
+  @apply border-l-2 border-primary bg-nav-bg p-4 mb-6 text-sm;
+}
+
+.mobile-nav--active {
+  @apply fixed top-0 left-0 right-0 bottom-0;
+}
+
+.nav-main__filler--active {
+  @apply flex-grow;
+}
+.nav-main.nav-main--top {
+  @apply sticky top-8;
+}
+.nav-main.nav-main--bottom {
+  @apply sticky bottom-8;
+}
+
+.button-social {
+  @apply border border-text rounded-full flex items-center justify-center;
+  width: 2em;
+  height: 2em;
+}
+
+.current-menu-item a {
+  @apply font-bold;
+}
+
+.searchform > div {
+  @apply flex flex-col space-y-2;
+}
+.searchform .screen-reader-text {
+  @apply font-bold;
+}
+.searchform input[type='submit'] {
+  @apply self-start;
+}
+
+.comment-form input:not([type='checkbox']):not([type='button']):not([type='submit']), .comment-form textarea {
+  @apply w-full;
+}

@@ -1,12 +1,5 @@
-<div class="row">
-  <div class="column">
-    <div class="layout__nav__visiblity-flex" data-toggle-id="layout-nav-tags">
-      <h3 class="layout__nav__visiblity-flex--grow">Schlagwörter</h3>
-    </div>
-  </div>
-</div>
-<div class="row" id="layout-nav-tags">
-  <div class="column">
+<div>
+  <wc-accordion id="tags" accordion-text="Schlagwörter">
     <ul class="header-tags">
       <?php 
         $wptc = wp_tag_cloud(array(
@@ -23,5 +16,5 @@
         foreach( $wptc as $wpt ) echo "<li>" . $wpt . "</li>\n"; 
       ?>
     </ul>
-  </div>
+  </wc-accordion>
 </div>

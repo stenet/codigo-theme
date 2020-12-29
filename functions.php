@@ -1,28 +1,25 @@
 <?php
 
-function load_stylesheets() {
-  wp_register_style("variables", get_template_directory_uri() . "/variables.css");
+function add_script_type_attribute($tag, $handle, $src) {
+  if ($handle !== "scripts") {
+    return $tag;
+  }
+  
+  $tag = '<script type="module" src="' . esc_url($src) . '"></script>';
+  return $tag;
+}
+function load_javascripts() {
+  wp_register_script("scripts", get_template_directory_uri() . "/js/scripts.js");
+  wp_enqueue_script("scripts");
+}
 
+function load_stylesheets() {
   wp_register_style("font", "https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic");
-  wp_register_style("normalize", "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
-  wp_register_style("milligram", get_template_directory_uri() . "/milligram-custom.css", array("font", "normalize", "variables"));
-    
   wp_register_style("fontawesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
   wp_enqueue_style("fontawesome");
 
-  wp_register_style("style", get_template_directory_uri() . "/style.css", array("variables", "milligram", "fontawesome"));
+  wp_register_style("style", get_template_directory_uri() . "/styles.css", array("font", "fontawesome"));
   wp_enqueue_style("style");
-}
-
-function load_javascripts() {
-  wp_register_script("wc-skill", get_template_directory_uri() . "/wc-skill.js");
-  wp_enqueue_script("wc-skill");
-
-  wp_register_script("wc-tag", get_template_directory_uri() . "/wc-tag.js");
-  wp_enqueue_script("wc-tag");
-
-  wp_register_script("scripts", get_template_directory_uri() . "/scripts.js");
-  wp_enqueue_script("scripts");
 }
 
 function get_social_medias() {
@@ -67,7 +64,7 @@ function get_social_media() {
     }
 
     $icon = $social_sites[$social_site];
-    $result = $result . "<a rel='noopener noreferrer' href='{$social_site_url}' target='_blank' class='button button-outline button-social'><i class='{$icon}'></i></a>";
+    $result = $result . "<a rel='noopener noreferrer' href='{$social_site_url}' target='_blank' class='button-social'><i class='{$icon}'></i></a>";
   }
 
   echo $result;
@@ -77,8 +74,10 @@ function get_body_style() {
   echo "style='background-image: url(" . get_template_directory_uri() . "/assets/background.png)'";
 }
 
-add_action("wp_enqueue_scripts", "load_stylesheets");
+add_filter("script_loader_tag", "add_script_type_attribute" , 10, 3);
+
 add_action("wp_enqueue_scripts", "load_javascripts");
+add_action("wp_enqueue_scripts", "load_stylesheets");
 add_action("customize_register", "customize_register");
 
 add_theme_support("menus");
