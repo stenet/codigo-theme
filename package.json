@@ -12,7 +12,8 @@
     "copystyle": "cpx ./style.css ./dist",
     "cssdeb": "tailwindcss-cli build ./tailwind.css -o ./styles.css",
     "cssprod": "cross-env NODE_ENV=production tailwindcss-cli build ./tailwind.css -o ./dist/styles.css",
-    "build": "npm run del && tsc && npm run copyscreenshot && npm run copystyle && npm run cssdeb && npm run cssprod && npm run copyjs && npm run copyphp && npm run copyassets"
+    "parcel": "parcel build -d ./js -o build.js src/scripts.ts",
+    "build": "npm run del && npm run parcel && npm run copyscreenshot && npm run copystyle && npm run cssdeb && npm run cssprod && npm run copyjs && npm run copyphp && npm run copyassets"
   },
   "repository": {
     "type": "git",
@@ -28,9 +29,13 @@
     "autoprefixer": "^10.1.0",
     "cpx": "^1.5.0",
     "cross-env": "^7.0.3",
+    "parcel": "^1.12.4",
     "postcss": "^8.2.1",
     "rimraf": "^3.0.2",
     "tailwindcss": "^2.0.2",
     "tailwindcss-cli": "^0.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.3"
   }
 }

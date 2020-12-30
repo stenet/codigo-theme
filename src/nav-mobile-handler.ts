@@ -1,4 +1,4 @@
-import AnimateUtils from "./animate-utils.js";
+import AnimateUtils from "./animate-utils";
 
 export default class NavMobileHandler {
   private _headerEl: HTMLElement | null;

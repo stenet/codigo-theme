@@ -1,15 +1,7 @@
 <?php
 
-function add_script_type_attribute($tag, $handle, $src) {
-  if ($handle !== "scripts") {
-    return $tag;
-  }
-  
-  $tag = '<script type="module" src="' . esc_url($src) . '"></script>';
-  return $tag;
-}
 function load_javascripts() {
-  wp_register_script("scripts", get_template_directory_uri() . "/js/scripts.js");
+  wp_register_script("scripts", get_template_directory_uri() . "/js/build.js");
   wp_enqueue_script("scripts");
 }
 
@@ -73,8 +65,6 @@ function get_social_media() {
 function get_body_style() {
   echo "style='background-image: url(" . get_template_directory_uri() . "/assets/background.png)'";
 }
-
-add_filter("script_loader_tag", "add_script_type_attribute" , 10, 3);
 
 add_action("wp_enqueue_scripts", "load_javascripts");
 add_action("wp_enqueue_scripts", "load_stylesheets");

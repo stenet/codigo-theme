@@ -1,9 +1,9 @@
-import PostComments from "./post-comments.js";
-import NavHandler from "./nav-handler.js";
-import NavMobileHandler from "./nav-mobile-handler.js";
-import "./wc-skill.js";
-import "./wc-tag.js";
-import "./wc-accordion.js";
+import PostComments from "./post-comments";
+import NavHandler from "./nav-handler";
+import NavMobileHandler from "./nav-mobile-handler";
+import "./wc-skill";
+import "./wc-tag";
+import "./wc-accordion";
 
 window.addEventListener("DOMContentLoaded", () => {
     PostComments.initialize();

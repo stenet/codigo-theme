@@ -1,5 +1,3 @@
-import Utils from "./utils.js";
-
 class WcSkill extends HTMLElement {
   constructor() {
     super();

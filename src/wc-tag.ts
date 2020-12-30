@@ -1,5 +1,3 @@
-import Utils from "./utils.js";
-
 class WcTag extends HTMLElement {
   constructor() {
     super();
