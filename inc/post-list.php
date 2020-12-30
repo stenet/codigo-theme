@@ -10,9 +10,11 @@
   </article>
   <?php endwhile;?>
 
-  <?php the_posts_pagination(array(
-    'screen_reader_text' => 'Navigation'
-  ));?>
+  <div class="pt-8">
+    <?php the_posts_pagination(array(
+      'screen_reader_text' => 'Navigation'
+    ));?>
+  </div>
   <?php else :?>
   <div>
     Es wurden keine Beiträge gefunden

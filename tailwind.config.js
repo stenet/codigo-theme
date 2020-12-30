@@ -35,6 +35,8 @@ module.exports = {
         "nav-text": "#f0f7fc",
         "nav-text-a": "#c9d1d9",
         "nav-input": "#222222",
+        "nav-border": "#575757",
+        "nav-border-focus": "#878787",
         "content-bg": "#F8F8F8",
         "border": "#DDDDDD",
         "text": "#606c76",

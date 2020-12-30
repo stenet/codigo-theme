@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "del": "rimraf ./js && rimraf ./dist",
+    "del": "rimraf ./js/**/* && rimraf ./dist/**/*",
     "copyjs": "cpx ./js/**/* ./dist/js",
     "copyphp": "cpx ./**/*.php ./dist",
     "copyassets": "cpx ./assets/**/* ./dist/assets",
+    "copyscreenshot": "cpx ./screenshot.png ./dist",
+    "copystyle": "cpx ./style.css ./dist",
     "cssdeb": "tailwindcss-cli build ./tailwind.css -o ./styles.css",
     "cssprod": "cross-env NODE_ENV=production tailwindcss-cli build ./tailwind.css -o ./dist/styles.css",
-    "build": "npm run del && tsc && npm run cssdeb && npm run cssprod && npm run copyjs && npm run copyphp && npm run copyassets"
+    "build": "npm run del && tsc && npm run copyscreenshot && npm run copystyle && npm run cssdeb && npm run cssprod && npm run copyjs && npm run copyphp && npm run copyassets"
   },
   "repository": {
     "type": "git",

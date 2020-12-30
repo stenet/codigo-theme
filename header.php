@@ -14,7 +14,6 @@
           <div class="nav-main__filler"></div>
           <div class="nav-main lg:block lg:flex-grow-0 lg:py-0 lg:overflow-auto lg:text-base overflow-scroll flex-grow hidden px-4 space-y-4 py-4">
             <?php include(get_template_directory() . '/inc/sidebar-icon.php');?>
-            <?php include(get_template_directory() . '/inc/sidebar-header.php');?>
             <?php include(get_template_directory() . '/inc/sidebar-social.php');?>
             <?php include(get_template_directory() . '/inc/sidebar-nav.php');?>
             <?php include(get_template_directory() . '/inc/sidebar-search.php');?>
@@ -25,4 +24,4 @@
           </div>
         </header>
         
-        <div class="lg:border-r lg:border-border px-4 py-8 flex-auto bg-content-bg">       
+        <div class="content-main lg:border-r lg:border-border px-4 py-8 flex-auto bg-content-bg">       

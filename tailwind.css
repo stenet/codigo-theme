@@ -55,9 +55,6 @@ header a {
 header a:hover {
   @apply text-nav-text;
 }
-a:not(.plain) {
-  @apply border-none;
-}
 
 header.mobile-nav--active {
   @apply fixed top-0 left-0 right-0 bottom-0;
@@ -92,45 +89,45 @@ header .current-menu-item a {
 Article 
 ======================================================= */
 
-article ul {
+.content-main ul {
   @apply list-inside list-square;
 }
 
-article label {
+.content-main label {
   @apply block font-bold mb-2;
 }
-article input + label {
+.content-main input + label {
   @apply inline-block ml-2;
 }
 
-article input:not([type='checkbox']):not([type='button']):not([type='submit']), article textarea {
+.content-main input:not([type='checkbox']):not([type='button']):not([type='submit']), .content-main textarea {
   @apply appearance-none px-2 py-1 bg-white text-text border border-border rounded-md;
 }
 
-article input, article textarea {
+.content-main input, .content-main textarea {
   @apply outline-none;
 }
-article input:focus:not([type='checkbox']):not([type='submit']), article textarea:focus {
+.content-main input:focus:not([type='checkbox']):not([type='submit']), .content-main textarea:focus {
   @apply border border-black;
 }
 
-article button, article input[type='button'], article input[type='submit'] {
+.content-main button, .content-main input[type='button'], .content-main input[type='submit'] {
   @apply appearance-none px-6 py-3 bg-nav-input border border-nav-input uppercase rounded-md text-white font-bold text-xs cursor-pointer;
 }
-article pre {
+.content-main pre {
   @apply border-l-2 border-primary bg-border p-4 mb-6 text-sm;
 }
 
-article a {
+.content-main a {
   @apply text-primary;
 }
-article a:hover {
+.content-main a:hover {
   @apply text-text;
 }
-article a:not(.plain) {
+.content-main a:not(.plain) {
   @apply border-b border-border relative;
 }
-article a:not(.plain)::after {
+.content-main a:not(.plain)::after {
   @apply absolute bg-text;
   content: "";
   bottom: -1px;
@@ -139,7 +136,7 @@ article a:not(.plain)::after {
   height: 1px;
   transition: right ease-in-out .2s;
 }
-article a:not(.plain):hover::after {
+.content-main a:not(.plain):hover::after {
   right: 0;
 }
 
