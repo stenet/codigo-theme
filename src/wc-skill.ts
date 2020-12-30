@@ -16,7 +16,7 @@ class WcSkill extends HTMLElement {
         : "var(--green)";
     
     const outer = document.createElement("div");
-    outer.classList.add("text-white", "p-2", "space-y-2", "space-x-2", "text-sm", "border", "leading-tight");
+    outer.classList.add("text-white", "p-2", "space-y-2", "space-x-2", "text-sm", "font-medium", "border", "leading-tight");
     outer.style.background = `linear-gradient(90deg, ${skillColor} 0%, ${skillColor} ${skillLevel}%, white ${skillLevel}%)`;
     outer.style.borderColor = skillColor;
     

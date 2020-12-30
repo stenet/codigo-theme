@@ -45,6 +45,10 @@ ul > li {
   @apply mb-1;
 }
 
+wc-tag {
+  @apply block mr-1 mb-1;
+}
+
 /* =======================================================
 Header
 ======================================================= */
@@ -118,16 +122,16 @@ Article
   @apply border-l-2 border-primary bg-border p-4 mb-6 text-sm;
 }
 
-.content-main a {
+.content-main a:not(.superplain) {
   @apply text-primary;
 }
-.content-main a:hover {
+.content-main a:not(.superplain):hover {
   @apply text-text;
 }
-.content-main a:not(.plain) {
+.content-main a:not(.superplain):not(.plain) {
   @apply border-b border-border relative;
 }
-.content-main a:not(.plain)::after {
+.content-main a:not(.superplain):not(.plain)::after {
   @apply absolute bg-text;
   content: "";
   bottom: -1px;

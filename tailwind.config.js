@@ -40,6 +40,7 @@ module.exports = {
         "content-bg": "#F8F8F8",
         "border": "#DDDDDD",
         "text": "#606c76",
+        "text-light": "#747c82",
         "primary": "#212121"
       },
       listStyleType: {
