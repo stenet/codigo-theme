@@ -39,11 +39,8 @@ export class SwipeHandler {
         return;
       }
 
-      const x = touches[0].screenX;
-      const y = touches[0].screenY;
-
-      const xDiff = touchStartInfo.x - x;
-      const yDiff = touchStartInfo.y - y;
+      const xDiff = touchStartInfo.x - touches[0].screenX;
+      const yDiff = touchStartInfo.y - touches[0].screenY;
 
       if (Math.abs(xDiff) < Math.abs(yDiff)) {
         return;
@@ -55,7 +52,7 @@ export class SwipeHandler {
         ? SwipeDirection.Right
         : SwipeDirection.Left;
 
-      this._handlers.forEach(h => h(direction, x, y));
+      this._handlers.forEach(h => h(direction, touches[0].clientX, touches[0].clientY));
     });
   }
 }
