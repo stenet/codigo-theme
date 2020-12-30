@@ -1,11 +1,14 @@
 import AnimateUtils from "./animate-utils";
+import { SwipeHandler, SwipeDirection } from "./swipe-handler";
 
 export default class NavMobileHandler {
   private _headerEl: HTMLElement | null;
   private _navMainEl: HTMLElement | null;
   private _navMainBgEl: HTMLElement | null;
   private _navMobileEl: HTMLElement | null;
+  private _navMobilButtonEl: HTMLElement | undefined | null;
   private _navMobilIconEl: HTMLElement | undefined | null;
+  private _swipeHandler: SwipeHandler | undefined;
 
   private _isVisible = false;
 
@@ -28,18 +31,24 @@ export default class NavMobileHandler {
       return;
     }
 
-    this._navMobilIconEl = this._navMobileEl!.querySelector("i");
+    this._navMobilButtonEl = <HTMLElement>this._navMobileEl!.querySelector("a[href='#']");
+    if (!this._navMobilButtonEl) {
+      return;
+    }
+
+    this._navMobilIconEl = this._navMobilButtonEl!.querySelector("i");
     if (!this._navMobilIconEl) {
       return;
     }
 
     this.registerToggle();
+    this.registerSwipeHandler();
   }
 
   private registerToggle() {
     let isWorking = false;
 
-    this._navMobileEl!.addEventListener("click", async (e: MouseEvent) => {
+    this._navMobilButtonEl!.addEventListener("click", async (e: MouseEvent) => {
       if (isWorking) {
         return;
       }
@@ -57,6 +66,30 @@ export default class NavMobileHandler {
       this.toggle(0, 0, false);
     });
   }
+  private registerSwipeHandler() {
+    this._swipeHandler = new SwipeHandler();
+    this._swipeHandler.registerSwipe((direction, x, y) => {
+      switch (direction) {
+        case SwipeDirection.Left: {
+          if (!this._isVisible) {
+            return;
+          }
+
+          this.toggle(x, y, true);
+          break;
+        }
+        case SwipeDirection.Right: {
+          if (this._isVisible) {
+            return;
+          }
+
+          this.toggle(x, y, true);
+          break;
+        }
+      }
+    });
+  }
+
   private async toggle(x: number, y: number, animate = true) {
     this._isVisible = !this._isVisible;
 
