@@ -13,7 +13,8 @@
     "cssdeb": "tailwindcss-cli build ./tailwind.css -o ./styles.css",
     "cssprod": "cross-env NODE_ENV=production tailwindcss-cli build ./tailwind.css -o ./dist/styles.css",
     "parcel": "parcel build -d ./js -o build.js src/scripts.ts",
-    "build": "npm run del && npm run parcel && npm run copyscreenshot && npm run copystyle && npm run cssdeb && npm run cssprod && npm run copyjs && npm run copyphp && npm run copyassets"
+    "parcelcss": "parcel build -d ./dist -o styles.css dist/styles.css",
+    "build": "npm run del && npm run parcel && npm run copyscreenshot && npm run copystyle && npm run cssdeb && npm run cssprod && npm run parcelcss && npm run copyjs && npm run copyphp && npm run copyassets"
   },
   "repository": {
     "type": "git",
