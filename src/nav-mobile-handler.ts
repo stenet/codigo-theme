@@ -43,38 +43,48 @@ export default class NavMobileHandler {
       if (isWorking) {
         return;
       }
-
+  
       isWorking = true;
-      this._isVisible = !this._isVisible;
-
-      this._isVisible
-        ? document.body.style.overflow = "hidden"
-        : document.body.style.overflow = "";
-
-      if (this._isVisible) {
-        await this.shrinkGrowCircle(e.x, e.y);
-
-        this._isVisible
-          ? this._headerEl!.classList.add("mobile-nav--active")
-          : this._headerEl!.classList.remove("mobile-nav--active");
-
-        await this.showHideNav();
-      } else {
-        await this.showHideNav();
-
-        this._isVisible
-          ? this._headerEl!.classList.add("mobile-nav--active")
-          : this._headerEl!.classList.remove("mobile-nav--active");
-
-        await this.shrinkGrowCircle(e.x, e.y);
+      await this.toggle(e.x, e.y);
+      isWorking = false;
+      
+    });
+    window.addEventListener("resize", () => {
+      if (!this._isVisible) {
+        return;
       }
 
-      this.toggleNavIcon();
-
-      isWorking = false;
+      this.toggle(0, 0, false);
     });
   }
-  private async shrinkGrowCircle(x: number, y: number) {
+  private async toggle(x: number, y: number, animate = true) {
+    this._isVisible = !this._isVisible;
+
+    this._isVisible
+      ? document.body.style.overflow = "hidden"
+      : document.body.style.overflow = "";
+
+    if (this._isVisible) {
+      await this.shrinkGrowCircle(x, y, animate);
+
+      this._isVisible
+        ? this._headerEl!.classList.add("mobile-nav--active")
+        : this._headerEl!.classList.remove("mobile-nav--active");
+
+      await this.showHideNav(animate);
+    } else {
+      await this.showHideNav(animate);
+
+      this._isVisible
+        ? this._headerEl!.classList.add("mobile-nav--active")
+        : this._headerEl!.classList.remove("mobile-nav--active");
+
+      await this.shrinkGrowCircle(x, y, animate);
+    }
+
+    this.toggleNavIcon();
+  }
+  private async shrinkGrowCircle(x: number, y: number, animate = true) {
     const bg = this._navMainBgEl!;
 
     if (this._isVisible) {
@@ -94,7 +104,7 @@ export default class NavMobileHandler {
         }
       };
 
-      await AnimateUtils.animate(bg, style, 400);
+      await AnimateUtils.animate(bg, style, animate ? 400 : 0);
     } else {
       const style = {
         animate: {
@@ -107,10 +117,10 @@ export default class NavMobileHandler {
         }
       };
 
-      await AnimateUtils.animate(bg, style, 400);
+      await AnimateUtils.animate(bg, style, animate ? 400 : 0);
     }
   }
-  private async showHideNav() {
+  private async showHideNav(animate = true) {
     const el = this._navMainEl!;
 
     if (this._isVisible) {
@@ -124,7 +134,7 @@ export default class NavMobileHandler {
         }
       };
 
-      await AnimateUtils.animate(el, style);
+      await AnimateUtils.animate(el, style, animate ? undefined : 0);
     } else {
       const style = {
         before: {
@@ -132,14 +142,15 @@ export default class NavMobileHandler {
           opacity: 1
         },
         after: {
-          display: "none"
+          display: "",
+          opacity: ""
         },
         animate: {
           opacity: 0
         }
       };
 
-      await AnimateUtils.animate(el, style);
+      await AnimateUtils.animate(el, style, animate ? undefined : 0);
     }
   }
   private toggleNavIcon() {

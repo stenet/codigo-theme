@@ -6,12 +6,14 @@ export default class AnimateUtils {
       Object.assign(el.style, options.before);
     }
 
-    const animation = el.animate([options.animate], {
-      easing: "ease-in",
-      duration: duration
-    });
-
-    await animation.finished;
+    if (duration > 0) {
+      const animation = el.animate([options.animate], {
+        easing: "ease-in",
+        duration: duration
+      });
+  
+      await animation.finished;
+    }
 
     const after = Object.assign({}, options.animate, options.after || {});
     if (Object.getOwnPropertyNames(after).length > 0) {
