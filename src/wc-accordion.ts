@@ -7,6 +7,7 @@ class WcAccordion extends HTMLElement {
 
   private _icon = "fa-angle-down";
   private _isContentVisible = false;
+  private _isWorking = false;
 
   constructor() {
     super();
@@ -41,14 +42,21 @@ class WcAccordion extends HTMLElement {
     const header = document.createElement("div");
     outer.appendChild(header);
     header.classList.add("flex", "items-center", "cursor-pointer");
-    header.addEventListener("click", () => {
+    header.addEventListener("click", async () => {
+      if (this._isWorking) {
+        return;
+      }
+
+      this._isWorking = true;
       this._isContentVisible = !this._isContentVisible;
-      this.updateVisiblity();
+      await this.updateVisiblity();
+
+      this._isWorking = false;
     });
     
     const text = document.createElement("div");
     header.appendChild(text);
-    text.classList.add("flex-grow", "group");
+    text.classList.add("flex-grow", "select-none", "group");
     text.innerText = accordionText;
     
     this._angle = document.createElement("i");
@@ -67,7 +75,7 @@ class WcAccordion extends HTMLElement {
     this.updateVisiblity(false);
   }
 
-  private updateVisiblity(animate = true) {
+  private async updateVisiblity(animate = true) {
     const contentContainerHeight = Utils.getElementHeight(this._contentContainer!);
 
     //TODO sollte doch gehen => war falsche Reihenfolge beim Einfügen
@@ -91,23 +99,30 @@ class WcAccordion extends HTMLElement {
         this._contentContainer!.style.height = `${contentContainerHeight}px`;
       }
 
-      this._contentContainer!.animate([newContainerStyle], {
+      const contentAnimation = this._contentContainer!.animate([newContainerStyle], {
         duration: 200,
         easing: "ease-in-out"
-      }).finished.then(() => {
-        Object.assign(this._contentContainer!.style, newContainerStyle);
       });
 
-      this._angle!.animate([newAngleStyle], {
+      const angleAnimation = this._angle!.animate([newAngleStyle], {
         duration: 200,
         easing: "ease-in-out"
-      }).finished.then(() => {
+      });
+      
+      contentAnimation.finished.then(() => {
+        Object.assign(this._contentContainer!.style, newContainerStyle);
+      });
+      
+      angleAnimation.finished.then(() => {
         Object.assign(this._angle!.style, newAngleStyle);
 
         this.dispatchEvent(new CustomEvent("accordion-changed", {
           bubbles: true
         }));
       });
+
+      await contentAnimation.finished;
+      await angleAnimation.finished;
     }
     else {
       Object.assign(this._contentContainer!.style, newContainerStyle);
