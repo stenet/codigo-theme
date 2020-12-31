@@ -17,12 +17,11 @@ html {
   font-size: 16px;
 }
 html, body {
-  @apply text-text;
-  font-weight: 300;
+  @apply text-text font-light;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply mb-6 tracking-tighter;
+  @apply font-semibold tracking-tighter mb-6;
 }
 h1 {
   @apply text-4xl font-bold relative;
