@@ -148,11 +148,11 @@ Article
   right: 0;
 }
 
-.comment-form-cookies-consent {
-  @apply flex space-x-2;
+.content-main .screen-reader-text {
+  @apply hidden;
 }
-.comment-form-cookies-consent input {
-  @apply flex-shrink-0;
+.content-main .page-numbers {
+  @apply px-4 py-2 font-semibold;
 }
 
 /* =======================================================
@@ -164,8 +164,15 @@ Comments
 }
 
 .post-comment-container ul {
-  @apply list-none
+  @apply list-none;
 }
 .post-comment-container ul ul {
   @apply pt-4 pl-4;
+}
+
+.comment-form-cookies-consent {
+  @apply flex space-x-2;
+}
+.comment-form-cookies-consent input {
+  @apply flex-shrink-0;
 }

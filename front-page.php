@@ -1,8 +1,8 @@
 <?php get_header();?>
 
-<div>
+<article>
   <h1><?php the_title('');?></h1>
   <?php include(get_template_directory() . '/inc/post-item-content.php');?>   
-</div>
+</article>
 
 <?php get_footer();?>
