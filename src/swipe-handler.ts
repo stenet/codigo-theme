@@ -16,8 +16,8 @@ export class SwipeHandler {
   private registerEvents() {
     document.addEventListener("touchstart", (e) => {
       this._touchStartInfo = {
-        x: e.touches[0].screenX,
-        y: e.touches[0].screenY,
+        x: e.touches[0].clientX,
+        y: e.touches[0].clientY,
         date: Date.now()
       };
     });
@@ -39,8 +39,8 @@ export class SwipeHandler {
         return;
       }
 
-      const xDiff = touchStartInfo.x - touches[0].screenX;
-      const yDiff = touchStartInfo.y - touches[0].screenY;
+      const xDiff = touchStartInfo.x - touches[0].clientX;
+      const yDiff = touchStartInfo.y - touches[0].clientY;
 
       if (Math.abs(xDiff) < Math.abs(yDiff)) {
         return;
