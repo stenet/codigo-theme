@@ -1,0 +1,20 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: codigo
+    image: node
+    volumes:
+      - name: theme
+        path: /var/theme
+    commands:
+      - npm install
+      - npm run build
+      - rm /var/theme/* -rf
+      - cp ./dist/* /var/theme -r
+
+volumes:
+  - name: theme
+    host:
+      path: /media/stefan/wp/wp-app/wp-content/themes/codigo-theme
