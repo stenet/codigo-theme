@@ -1,7 +1,9 @@
 <div class="space-y-4">
   <?php if (have_posts()) : while(have_posts()) : the_post();?>
   <article class="border border-border rounded p-4 overflow-x-hidden">
-    <h2><?php the_title();?></h2>
+    <div class="mb-6 font-semibold">
+      <?php the_title();?>
+    </div>
     <?php include(get_template_directory() . '/inc/post-date.php');?>
     <?php include(get_template_directory() . '/inc/post-category-tags.php');?>
 

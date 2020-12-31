@@ -21,10 +21,10 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-semibold tracking-tighter mb-6;
+  @apply tracking-tighter mb-6;
 }
 h1 {
-  @apply text-4xl font-bold relative;
+  @apply font-semibold text-4xl relative;
 }
 h2 {
   @apply text-2xl;
@@ -141,7 +141,7 @@ Article
   left: 0;
   right: 100%;
   height: 1px;
-  transition: right ease-in-out .2s;
+  transition: right ease-in .2s;
 }
 .content-main a:not(.plain):hover::after {
   right: 0;
