@@ -1,15 +1,21 @@
 <div class="space-y-4">
   <?php if (have_posts()) : while(have_posts()) : the_post();?>
-  <article class="border border-border rounded p-4 overflow-x-hidden">
-    <div class="mb-6 font-semibold">
-      <?php the_title();?>
+  <article class="p-4 overflow-x-hidden bg-white border rounded border-border">
+    <div class="lg:flex">
+      <div>
+        <div class="mb-6 font-semibold">
+          <?php the_title();?>
+        </div>
+        <?php include(get_template_directory() . '/inc/post-date.php');?>
+      </div>
+      <div class="flex-grow">
+        <?php include(get_template_directory() . '/inc/post-category-tags.php');?>
+      </div>
     </div>
-    <?php include(get_template_directory() . '/inc/post-date.php');?>
-    <?php include(get_template_directory() . '/inc/post-category-tags.php');?>
 
     <?php the_excerpt();?>
     
-    <a class="plain font-semibold" href="<?php the_permalink();?>">Beitrag anzeigen <i class="fas fa-arrow-right"></i></a>
+    <a class="font-semibold plain" href="<?php the_permalink();?>">Beitrag anzeigen <i class="fas fa-arrow-right"></i></a>
   </article>
   <?php endwhile;?>
 

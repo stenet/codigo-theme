@@ -17,14 +17,14 @@ html {
   font-size: 16px;
 }
 html, body {
-  @apply text-text font-light;
+  @apply font-light text-text;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply tracking-tighter mb-6;
+  @apply mb-6 tracking-tighter;
 }
 h1 {
-  @apply font-semibold text-4xl relative;
+  @apply relative text-4xl font-semibold;
 }
 h2 {
   @apply text-2xl;
@@ -45,7 +45,7 @@ ul > li {
 }
 
 wc-tag {
-  @apply block mr-1 mb-1;
+  @apply block mb-1 mr-1;
 }
 
 /* =======================================================
@@ -60,7 +60,7 @@ header a:hover {
 }
 
 header.mobile-nav--active {
-  @apply fixed top-0 left-0 right-0 bottom-0;
+  @apply fixed top-0 bottom-0 left-0 right-0;
 }
 
 header .nav-main__filler--active {
@@ -74,14 +74,14 @@ header .nav-main.nav-main--bottom {
 }
 
 header .button-social {
-  @apply text-nav-text-a flex items-center justify-center w-8 h-8;
+  @apply flex items-center justify-center w-8 h-8 text-nav-text-a;
 }
 header .button-social:hover {
   @apply text-nav-text;
 }
 
 header .group {
-  @apply uppercase text-sm font-bold;
+  @apply text-sm font-bold uppercase;
 }
 
 header .current-menu-item a {
@@ -97,17 +97,17 @@ Article
 }
 
 .content-main label {
-  @apply block font-bold mb-2;
+  @apply block mb-2 font-bold;
 }
 .content-main input:not([type='checkbox']):not([type='button']):not([type='submit']), .content-main textarea {
-  @apply appearance-none px-2 py-1 bg-white text-text border border-border rounded-md;
+  @apply px-2 py-1 bg-white border rounded-md appearance-none text-text border-border;
 }
 
 .content-main input[type='checkbox'] {
-  @apply appearance-none rounded border border-border w-5 h-5;
+  @apply w-5 h-5 border rounded appearance-none border-border;
 }
 .content-main input[type='checkbox']:checked {
-  @apply bg-center bg-no-repeat bg-gray-600;
+  @apply bg-gray-600 bg-center bg-no-repeat;
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
 }
 
@@ -119,10 +119,10 @@ Article
 }
 
 .content-main button, .content-main input[type='button'], .content-main input[type='submit'] {
-  @apply appearance-none px-6 py-3 bg-nav-input border border-nav-input uppercase rounded-md text-white font-bold text-xs cursor-pointer;
+  @apply px-6 py-3 text-xs font-bold text-white uppercase border rounded-md appearance-none cursor-pointer bg-nav-input border-nav-input;
 }
 .content-main pre {
-  @apply border-l-2 border-primary bg-border p-4 mb-6 text-sm;
+  @apply p-4 mb-6 text-sm border-l-2 border-primary bg-border;
 }
 
 .content-main a:not(.superplain) {
@@ -131,10 +131,10 @@ Article
 .content-main a:not(.superplain):hover {
   @apply text-text;
 }
-.content-main a:not(.superplain):not(.plain) {
-  @apply border-b border-border relative;
+.content-main a:not(.superplain):not(.plain):not(.page-numbers) {
+  @apply relative border-b border-border;
 }
-.content-main a:not(.superplain):not(.plain)::after {
+.content-main a:not(.superplain):not(.plain):not(.page-numbers)::after {
   @apply absolute bg-text;
   content: "";
   bottom: -1px;
@@ -143,7 +143,7 @@ Article
   height: 1px;
   transition: right ease-in .2s;
 }
-.content-main a:not(.plain):hover::after {
+.content-main a:not(.plain):not(.page-numbers):hover::after {
   right: 0;
 }
 
@@ -151,7 +151,13 @@ Article
   @apply hidden;
 }
 .content-main .page-numbers {
-  @apply px-2 py-2 font-semibold inline-block;
+  @apply inline-block px-3 py-1 font-semibold border rounded border-border text-text;
+}
+.content-main a.page-numbers {
+  @apply text-text;
+}
+.content-main a.page-numbers:hover {
+  @apply text-primary border-primary;
 }
 
 /* =======================================================

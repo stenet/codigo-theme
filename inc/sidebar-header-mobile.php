@@ -1,4 +1,4 @@
-<div class="nav-mobile flex items-center bg-nav-bg text-nav-text px-4 py-2 text-xl flex-none lg:hidden z-30">
+<div class="z-30 flex items-center flex-none px-4 py-2 text-xl nav-mobile bg-nav-bg text-nav-text lg:hidden">
   <a href="/">
     <i class="fas fa-home fa-fw"></i> 
   </a>
