@@ -21,6 +21,8 @@ module.exports = {
         "leading-tight",
         "space-y-2",
         "space-x-2",
+        "space-x-1",
+        "space-x-4",
         "border"]
     }
   },
