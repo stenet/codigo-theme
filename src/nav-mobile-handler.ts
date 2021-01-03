@@ -42,6 +42,7 @@ export default class NavMobileHandler {
     }
 
     this.registerToggle();
+    this.registerResizeHandler();
     this.registerSwipeHandler();
   }
 
@@ -58,11 +59,20 @@ export default class NavMobileHandler {
       isWorking = false;
       
     });
+  }
+  private registerResizeHandler() {
+    let oldWidth = window.outerWidth;
+
     window.addEventListener("resize", () => {
       if (!this._isVisible) {
         return;
       }
 
+      if (oldWidth == window.outerWidth) {
+        return;
+      }
+
+      oldWidth = window.outerWidth;
       this.toggle(0, 0, false);
     });
   }
