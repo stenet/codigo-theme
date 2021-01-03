@@ -1,4 +1,4 @@
-import AnimateUtils from "./animate-utils";
+import { AnimateUtils, IAnimateOptions } from "./animate-utils";
 import { SwipeHandler, SwipeDirection } from "./swipe-handler";
 
 export default class NavMobileHandler {
@@ -131,7 +131,9 @@ export default class NavMobileHandler {
     const bg = this._navMainBgEl!;
 
     if (this._isVisible) {
-      const style = {
+      const style: IAnimateOptions = {
+        element: bg,
+        duration: animate ? 400 : 0,
         before: {
           top: `${y}px`,
           left: `${x}px`,
@@ -147,9 +149,11 @@ export default class NavMobileHandler {
         }
       };
 
-      await AnimateUtils.animate(bg, style, animate ? 400 : 0);
+      await AnimateUtils.animate(style);
     } else {
-      const style = {
+      const style: IAnimateOptions = {
+        element: bg,
+        duration: animate ? 400 : 0,
         animate: {
           transform: "scale(0)",
           opacity: 0
@@ -160,14 +164,16 @@ export default class NavMobileHandler {
         }
       };
 
-      await AnimateUtils.animate(bg, style, animate ? 400 : 0);
+      await AnimateUtils.animate(style);
     }
   }
   private async showHideNav(animate = true) {
     const el = this._navMainEl!;
 
     if (this._isVisible) {
-      const style = {
+      const style: IAnimateOptions = {
+        element: el,
+        duration: animate ? undefined : 0,
         before: {
           display: "block",
           opacity: 0
@@ -177,9 +183,11 @@ export default class NavMobileHandler {
         }
       };
 
-      await AnimateUtils.animate(el, style, animate ? undefined : 0);
+      await AnimateUtils.animate(style);
     } else {
-      const style = {
+      const style: IAnimateOptions = {
+        element: el,
+        duration: animate ? undefined : 0,
         before: {
           display: "block",
           opacity: 1
@@ -193,7 +201,7 @@ export default class NavMobileHandler {
         }
       };
 
-      await AnimateUtils.animate(el, style, animate ? undefined : 0);
+      await AnimateUtils.animate(style);
     }
   }
   private toggleNavIcon() {

@@ -33,17 +33,16 @@ module.exports = {
         "sans": ["Roboto", "'Helvetica Neue'", "Helvetica", "Arial", "'sans-serif'"]
       },
       colors: {
-        "nav-bg": "#444444",
-        "nav-text": "#f0f7fc",
-        "nav-text-a": "#c9d1d9",
-        "nav-input": "#222222",
-        "nav-border": "#575757",
-        "nav-border-focus": "#878787",
-        "content-bg": "#F8F8F8",
-        "border": "#DDDDDD",
-        "text": "#606c76",
-        "text-light": "#747c82",
-        "primary": "#212121"
+        "nav-bg": "var(--nav-bg)",
+        "input": "var(--input)",
+        "input-border": "var(--input-border)",
+        "input-border-focus": "var(--input-focus)",
+        "content-bg": "var(--content-bg)",
+        "group-bg": "var(--group-bg)",
+        "border": "var(--border)",
+        "text": "var(--text)",
+        "text-a": "var(--text-a)",
+        "text-light": "var(--text-light)"
       },
       listStyleType: {
         "square": "square"

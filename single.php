@@ -6,7 +6,9 @@
       <div class="mb-6">
         <?php include(get_template_directory() . '/inc/wp-title.php');?>
       </div>
-      <?php include(get_template_directory() . '/inc/post-date.php');?>
+      <div class="mb-6 -mt-6">
+        <?php include(get_template_directory() . '/inc/post-date.php');?>
+      </div>
     </div>
     <div class="flex-grow">
       <?php include(get_template_directory() . '/inc/post-category-tags.php');?>

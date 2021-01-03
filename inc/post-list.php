@@ -1,9 +1,9 @@
-<div class="space-y-4">
+<div class="space-y-4 post-list">
   <?php if (have_posts()) : while(have_posts()) : the_post();?>
-  <article class="p-4 overflow-x-hidden bg-white border rounded border-border">
-    <div class="lg:flex">
+  <article class="overflow-x-hidden bg-white border rounded border-border">
+    <div class="p-4 lg:flex bg-group-bg">
       <div>
-        <div class="mb-6 font-semibold">
+        <div class="font-semibold">
           <?php the_title();?>
         </div>
         <?php include(get_template_directory() . '/inc/post-date.php');?>
@@ -13,9 +13,11 @@
       </div>
     </div>
 
-    <?php the_excerpt();?>
-    
-    <a class="font-semibold plain" href="<?php the_permalink();?>">Beitrag anzeigen <i class="fas fa-arrow-right"></i></a>
+    <div class="p-4">
+      <?php the_excerpt();?>
+      
+      <a class="font-semibold plain" href="<?php the_permalink();?>">Beitrag anzeigen&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+    </div>
   </article>
   <?php endwhile;?>
 
