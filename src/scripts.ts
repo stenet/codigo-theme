@@ -1,5 +1,3 @@
-import "regenerator-runtime/runtime";
-
 import PostComments from "./post-comments";
 import NavHandler from "./nav-handler";
 import NavMobileHandler from "./nav-mobile-handler";
