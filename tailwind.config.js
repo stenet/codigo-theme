@@ -23,6 +23,7 @@ module.exports = {
         "space-x-2",
         "space-x-1",
         "space-x-4",
+        "space-x-reverse",
         "border"]
     }
   },
