@@ -3,7 +3,7 @@
   <article class="overflow-x-hidden">
     <div class="mb-4 lg:flex">
       <div>
-        <a class="text-xl" href="<?php the_permalink();?>">
+        <a class="text-xl tracking-tight" href="<?php the_permalink();?>">
           <?php the_title();?>
         </a>
         <div class="mt-1">
