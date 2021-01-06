@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   @apply pb-4 font-medium tracking-tight text-header;
 }
 h1 {
-  @apply pb-8 text-4xl;
+  @apply pt-2 pb-8 text-4xl font-bold;
 }
 h1 + h2 {
   @apply pt-0;
