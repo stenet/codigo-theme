@@ -1,23 +1,21 @@
-<div class="space-y-4 post-list">
+<div class="space-y-6 post-list">
   <?php if (have_posts()) : while(have_posts()) : the_post();?>
-  <article class="overflow-x-hidden bg-white border rounded border-border">
-    <div class="p-4 lg:flex bg-group-bg">
+  <article class="overflow-x-hidden">
+    <div class="mb-4 lg:flex">
       <div>
-        <div class="font-semibold">
+        <a class="text-xl font-semibold" href="<?php the_permalink();?>">
           <?php the_title();?>
+        </a>
+        <div class="mt-1">
+          <?php include(get_template_directory() . '/inc/post-date.php');?>
         </div>
-        <?php include(get_template_directory() . '/inc/post-date.php');?>
       </div>
       <div class="flex-grow">
         <?php include(get_template_directory() . '/inc/post-category-tags.php');?>
       </div>
     </div>
 
-    <div class="p-4">
-      <?php the_excerpt();?>
-      
-      <a class="font-semibold plain" href="<?php the_permalink();?>">Beitrag anzeigen&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
-    </div>
+    <?php the_excerpt();?>
   </article>
   <?php endwhile;?>
 

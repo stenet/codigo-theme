@@ -6,7 +6,7 @@
       <div class="mb-6">
         <?php include(get_template_directory() . '/inc/wp-title.php');?>
       </div>
-      <div class="mb-6 -mt-6">
+      <div class="mb-5 -mt-5">
         <?php include(get_template_directory() . '/inc/post-date.php');?>
       </div>
     </div>

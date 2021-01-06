@@ -6,7 +6,7 @@ $has_tags = has_tag();
 if ($has_categories || $has_tags) :?>
 <div class="flex flex-wrap lg:justify-end post-category-tags">
   <?php if ($has_categories) :?>
-    <wc-tag class="mr-1 lg:mr-0 lg:ml-1" tag-color="var(--green)">
+    <wc-tag class="mr-1 lg:mr-0 lg:ml-1" tag-hue="var(--green-hue)">
       <?php echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';?>
     </wc-tag>
   <?php endif;?>

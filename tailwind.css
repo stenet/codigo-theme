@@ -2,28 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+.hsl-functions {
+  --bg: hsl(var(--primary-hue), var(--bg-saturation), var(--bg-lightness));
+  --text: hsl(var(--primary-hue), var(--text-saturation), var(--text-lightness));
+  --header: hsl(var(--primary-hue), var(--header-saturation), var(--header-lightness));
+  --link: hsl(var(--link-hue), var(--link-saturation), var(--link-lightness));
+  --border: hsl(var(--primary-hue), var(--border-saturation), var(--border-lightness));
+  --input: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) + var(--input-lightness-modifier)));
+  --input-border: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
+  --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
+}
+
 :root {
-  --nav-bg: #424242;
-  --input: #ffffff;
-  --input-border: #e0e0e0;
-  --input-border-focus: #bdbdbd;
-  --content-bg: #fafafa;
-  --border: #e0e0e0;
-  --group-bg: #eeeeee;
-  --text: #616161;
-  --text-a: #212121;
-  --text-light: #9e9e9e;
+  --primary-hue: 220;
+  --link-hue: 360;
+
+  --bg-saturation: 0%;
+  --bg-lightness: 98%;
+
+  --text-saturation: 0%;
+  --text-lightness: 35%;
+
+  --header-saturation: 0%;
+  --header-lightness: 25%;
+
+  --link-saturation: 50%;
+  --link-lightness: 50%;
+
+  --border-saturation: 0%;
+  --border-lightness: 85%;
+
+  --input-lightness-modifier: 10%;
   --green: #4caf4f;
+  --green-hue: 122;
   --red: #f44336;
+  --red-hue: 4;
   --blue: #2096f3;
+  --blue-hue: 206;
   --yellow: #ffab00;
+  --yellow-hue: 40;
+
+  @apply hsl-functions;
 }
 header {
-  --text: #fafafa;
-  --text-a: #bdbdbd;
-  --input: #212121;
-  --input-border: #616161;
-  --input-border-focus: #bdbdbd;
+  --link-hue: 220;
+  --bg-lightness: 20%;
+  --text-saturation: 20%;
+  --text-lightness: 90%;
+  --link-saturation: 20%;
+  --link-lightness: 80%;
+  --input-lightness-modifier: -10%;
+
+  @apply hsl-functions;
 }
 
 /* =======================================================
@@ -38,7 +68,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply mb-6 font-medium tracking-tighter;
+  @apply mb-6 font-medium tracking-tight text-header;
 }
 h1 {
   @apply text-4xl;
@@ -66,7 +96,7 @@ Header
 ======================================================= */
 
 header a {
-  @apply text-text-a;
+  @apply text-link;
 }
 header a:hover {
   @apply text-text;
@@ -87,7 +117,7 @@ header .nav-main.nav-main--bottom {
 }
 
 header .button-social {
-  @apply flex items-center justify-center w-8 h-8 text-text-a;
+  @apply flex items-center justify-center w-8 h-8 text-link;
 }
 header .button-social:hover {
   @apply text-text;
@@ -121,29 +151,14 @@ Article
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
 }
 .content-main pre {
-  @apply p-4 mb-6 text-sm border-l-2 border-text-a bg-border;
+  @apply p-4 mb-6 text-sm border-l-2 border-link bg-border;
 }
 
 .content-main a:not(.superplain) {
-  @apply text-text-a;
+  @apply text-link;
 }
 .content-main a:not(.superplain):hover {
   @apply text-text;
-}
-.content-main a:not(.superplain):not(.plain):not(.page-numbers) {
-  @apply relative border-b border-border;
-}
-.content-main a:not(.superplain):not(.plain):not(.page-numbers)::after {
-  @apply absolute bg-text;
-  content: "";
-  bottom: -1px;
-  left: 0;
-  right: 100%;
-  height: 1px;
-  transition: right ease-in .2s;
-}
-.content-main a:not(.plain):not(.page-numbers):hover::after {
-  right: 0;
 }
 
 .content-main .screen-reader-text {
@@ -156,7 +171,7 @@ Article
   @apply text-text;
 }
 .content-main a.page-numbers:hover {
-  @apply text-text-a border-text-a;
+  @apply text-link border-link;
 }
 
 /* =======================================================
@@ -197,7 +212,7 @@ Comments
 }
 
 .post-container button, .post-container input[type='button'], .post-container input[type='submit'] {
-  @apply px-6 py-3 text-xs font-bold text-white uppercase border rounded-md appearance-none cursor-pointer bg-text-a border-text-a;
+  @apply px-6 py-3 text-xs font-bold text-white uppercase border rounded-md appearance-none cursor-pointer bg-link border-link;
 }
 
 .comment-form-cookies-consent {

@@ -34,16 +34,14 @@ module.exports = {
         "sans": ["Roboto", "'Helvetica Neue'", "Helvetica", "Arial", "'sans-serif'"]
       },
       colors: {
-        "nav-bg": "var(--nav-bg)",
+        "bg": "var(--bg)",
         "input": "var(--input)",
         "input-border": "var(--input-border)",
         "input-border-focus": "var(--input-focus)",
-        "content-bg": "var(--content-bg)",
-        "group-bg": "var(--group-bg)",
         "border": "var(--border)",
         "text": "var(--text)",
-        "text-a": "var(--text-a)",
-        "text-light": "var(--text-light)"
+        "header": "var(--header)",
+        "link": "var(--link)"
       },
       listStyleType: {
         "square": "square"
