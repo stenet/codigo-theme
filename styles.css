@@ -30244,10 +30244,11 @@ video {
   --header-lightness: 25%;
   --link-saturation: 50%;
   --link-lightness: 50%;
+  --link-saturation-hover: 20%;
+  --link-lightness-hover: 0%;
   --border-saturation: 0%;
   --border-lightness: 85%;
   --input-lightness-modifier: 10%;
-  --group-bg: #eeeeee;
   --green: #4caf4f;
   --green-hue: 122;
   --red: #f44336;
@@ -30273,6 +30274,8 @@ header {
   --text-lightness: 90%;
   --link-saturation: 20%;
   --link-lightness: 80%;
+  --link-saturation-hover: 0%;
+  --link-lightness-hover: 10%;
   --input-lightness-modifier: -10%;
   --bg: hsl(var(--primary-hue), var(--bg-saturation), var(--bg-lightness));
   --text: hsl(var(--primary-hue), var(--text-saturation), var(--text-lightness));
@@ -30331,17 +30334,17 @@ ul > li {
   margin-bottom: 0.25rem;
 }
 
-/* =======================================================
-Header
-======================================================= */
-
-header a {
+a:not(.superplain) {
   color: var(--link);
 }
 
-header a:hover {
-  color: var(--text);
+a:not(.superplain):hover {
+  --link: hsl(var(--link-hue), calc(var(--link-saturation) + var(--link-saturation-hover)), calc(var(--link-lightness) + var(--link-lightness-hover)));
 }
+
+/* =======================================================
+Header
+======================================================= */
 
 header.mobile-nav--active {
   position: fixed;
@@ -30431,14 +30434,6 @@ Article
   line-height: 1.25rem;
   margin-bottom: 1.5rem;
   padding: 1rem;
-}
-
-.content-main a:not(.superplain) {
-  color: var(--link);
-}
-
-.content-main a:not(.superplain):hover {
-  color: var(--text);
 }
 
 .content-main .screen-reader-text {
