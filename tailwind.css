@@ -158,10 +158,16 @@ Article
   @apply relative;
 }
 .content-main a[target='_blank']:not(.superplain)::after, .content-main a.link-with-arrow::after {
-  content: "\f30b";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   margin-left: 0.5rem;
+}
+.content-main a[target='_blank']:not(.superplain)::after {
+  content: "\f35d";
+  margin-left: 0.25rem;
+}
+.content-main a.link-with-arrow::after {
+  content: "\f30b";
 }
 
 .content-main label {
