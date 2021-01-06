@@ -30235,7 +30235,7 @@ video {
 
 :root {
   --primary-hue: 220;
-  --link-hue: 220;
+  --link-hue: var(--primary-hue);
   --bg-saturation: 0%;
   --bg-lightness: 98%;
   --text-saturation: 0%;
@@ -30268,7 +30268,6 @@ video {
 }
 
 header {
-  --link-hue: 220;
   --bg-saturation: 15%;
   --bg-lightness: 25%;
   --text-saturation: 20%;

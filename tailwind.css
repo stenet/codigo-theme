@@ -15,7 +15,7 @@
 
 :root {
   --primary-hue: 220;
-  --link-hue: 220;
+  --link-hue: var(--primary-hue);
 
   --bg-saturation: 0%;
   --bg-lightness: 98%;
@@ -35,6 +35,7 @@
   --border-lightness: 85%;
 
   --input-lightness-modifier: 10%;
+  
   --green: #4caf4f;
   --green-hue: 122;
   --red: #f44336;
@@ -47,7 +48,6 @@
   @apply hsl-functions;
 }
 header {
-  --link-hue: 220;
   --bg-saturation: 15%;
   --bg-lightness: 25%;
   --text-saturation: 20%;
