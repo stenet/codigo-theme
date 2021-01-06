@@ -11,7 +11,7 @@ class WcTag extends HTMLElement {
     const tagColor = this.getAttribute("tag-color") || "var(--blue)";
 
     const outer = document.createElement("div");
-    outer.classList.add("text-white", "px-2", "py-1", "mb-1", "rounded", "text-xs", "font-medium", "leading-tight");
+    outer.classList.add("text-white", "px-2", "py-1", "mb-1", "rounded", "text-xs", "font-medium");
     outer.style.backgroundColor = tagColor;
     
     while (this.childNodes.length > 0) {
