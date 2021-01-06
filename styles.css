@@ -362,7 +362,7 @@ ul {
  */
 
 html {
-  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; /* 1 */
+  font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -1917,7 +1917,7 @@ video {
 }
 
 .divide-input-border-focus > :not([hidden]) ~ :not([hidden]) {
-  border-color: var(--input-focus);
+  border-color: var(--input-border-focus);
 }
 
 .divide-border > :not([hidden]) ~ :not([hidden]) {
@@ -2550,7 +2550,7 @@ video {
 }
 
 .bg-input-border-focus {
-  background-color: var(--input-focus);
+  background-color: var(--input-border-focus);
 }
 
 .bg-border {
@@ -3000,7 +3000,7 @@ video {
 }
 
 .group:hover .group-hover\:bg-input-border-focus {
-  background-color: var(--input-focus);
+  background-color: var(--input-border-focus);
 }
 
 .group:hover .group-hover\:bg-border {
@@ -3450,7 +3450,7 @@ video {
 }
 
 .focus-within\:bg-input-border-focus:focus-within {
-  background-color: var(--input-focus);
+  background-color: var(--input-border-focus);
 }
 
 .focus-within\:bg-border:focus-within {
@@ -3900,7 +3900,7 @@ video {
 }
 
 .hover\:bg-input-border-focus:hover {
-  background-color: var(--input-focus);
+  background-color: var(--input-border-focus);
 }
 
 .hover\:bg-border:hover {
@@ -4350,7 +4350,7 @@ video {
 }
 
 .focus\:bg-input-border-focus:focus {
-  background-color: var(--input-focus);
+  background-color: var(--input-border-focus);
 }
 
 .focus\:bg-border:focus {
@@ -4841,7 +4841,7 @@ video {
 }
 
 .from-input-border-focus {
-  --tw-gradient-from: var(--input-focus);
+  --tw-gradient-from: var(--input-border-focus);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
@@ -5214,7 +5214,7 @@ video {
 }
 
 .via-input-border-focus {
-  --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
 .via-border {
@@ -5582,7 +5582,7 @@ video {
 }
 
 .to-input-border-focus {
-  --tw-gradient-to: var(--input-focus);
+  --tw-gradient-to: var(--input-border-focus);
 }
 
 .to-border {
@@ -6037,7 +6037,7 @@ video {
 }
 
 .hover\:from-input-border-focus:hover {
-  --tw-gradient-from: var(--input-focus);
+  --tw-gradient-from: var(--input-border-focus);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
@@ -6410,7 +6410,7 @@ video {
 }
 
 .hover\:via-input-border-focus:hover {
-  --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
 .hover\:via-border:hover {
@@ -6778,7 +6778,7 @@ video {
 }
 
 .hover\:to-input-border-focus:hover {
-  --tw-gradient-to: var(--input-focus);
+  --tw-gradient-to: var(--input-border-focus);
 }
 
 .hover\:to-border:hover {
@@ -7233,7 +7233,7 @@ video {
 }
 
 .focus\:from-input-border-focus:focus {
-  --tw-gradient-from: var(--input-focus);
+  --tw-gradient-from: var(--input-border-focus);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
@@ -7606,7 +7606,7 @@ video {
 }
 
 .focus\:via-input-border-focus:focus {
-  --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
 }
 
 .focus\:via-border:focus {
@@ -7974,7 +7974,7 @@ video {
 }
 
 .focus\:to-input-border-focus:focus {
-  --tw-gradient-to: var(--input-focus);
+  --tw-gradient-to: var(--input-border-focus);
 }
 
 .focus\:to-border:focus {
@@ -8804,7 +8804,7 @@ video {
 }
 
 .border-input-border-focus {
-  border-color: var(--input-focus);
+  border-color: var(--input-border-focus);
 }
 
 .border-border {
@@ -9254,7 +9254,7 @@ video {
 }
 
 .group:hover .group-hover\:border-input-border-focus {
-  border-color: var(--input-focus);
+  border-color: var(--input-border-focus);
 }
 
 .group:hover .group-hover\:border-border {
@@ -9704,7 +9704,7 @@ video {
 }
 
 .focus-within\:border-input-border-focus:focus-within {
-  border-color: var(--input-focus);
+  border-color: var(--input-border-focus);
 }
 
 .focus-within\:border-border:focus-within {
@@ -10154,7 +10154,7 @@ video {
 }
 
 .hover\:border-input-border-focus:hover {
-  border-color: var(--input-focus);
+  border-color: var(--input-border-focus);
 }
 
 .hover\:border-border:hover {
@@ -10604,7 +10604,7 @@ video {
 }
 
 .focus\:border-input-border-focus:focus {
-  border-color: var(--input-focus);
+  border-color: var(--input-border-focus);
 }
 
 .focus\:border-border:focus {
@@ -11860,7 +11860,7 @@ video {
 }
 
 .font-sans {
-  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+  font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .font-serif {
@@ -16628,7 +16628,7 @@ video {
 }
 
 .placeholder-input-border-focus::placeholder {
-  color: var(--input-focus);
+  color: var(--input-border-focus);
 }
 
 .placeholder-border::placeholder {
@@ -17078,7 +17078,7 @@ video {
 }
 
 .focus\:placeholder-input-border-focus:focus::placeholder {
-  color: var(--input-focus);
+  color: var(--input-border-focus);
 }
 
 .focus\:placeholder-border:focus::placeholder {
@@ -20748,7 +20748,7 @@ video {
 }
 
 .ring-offset-input-border-focus {
-  --tw-ring-offset-color: var(--input-focus);
+  --tw-ring-offset-color: var(--input-border-focus);
 }
 
 .ring-offset-border {
@@ -21116,7 +21116,7 @@ video {
 }
 
 .focus-within\:ring-offset-input-border-focus:focus-within {
-  --tw-ring-offset-color: var(--input-focus);
+  --tw-ring-offset-color: var(--input-border-focus);
 }
 
 .focus-within\:ring-offset-border:focus-within {
@@ -21484,7 +21484,7 @@ video {
 }
 
 .focus\:ring-offset-input-border-focus:focus {
-  --tw-ring-offset-color: var(--input-focus);
+  --tw-ring-offset-color: var(--input-border-focus);
 }
 
 .focus\:ring-offset-border:focus {
@@ -21994,7 +21994,7 @@ video {
 }
 
 .ring-input-border-focus {
-  --tw-ring-color: var(--input-focus);
+  --tw-ring-color: var(--input-border-focus);
 }
 
 .ring-border {
@@ -22444,7 +22444,7 @@ video {
 }
 
 .focus-within\:ring-input-border-focus:focus-within {
-  --tw-ring-color: var(--input-focus);
+  --tw-ring-color: var(--input-border-focus);
 }
 
 .focus-within\:ring-border:focus-within {
@@ -22894,7 +22894,7 @@ video {
 }
 
 .focus\:ring-input-border-focus:focus {
-  --tw-ring-color: var(--input-focus);
+  --tw-ring-color: var(--input-border-focus);
 }
 
 .focus\:ring-border:focus {
@@ -23568,7 +23568,7 @@ video {
 }
 
 .text-input-border-focus {
-  color: var(--input-focus);
+  color: var(--input-border-focus);
 }
 
 .text-border {
@@ -24018,7 +24018,7 @@ video {
 }
 
 .group:hover .group-hover\:text-input-border-focus {
-  color: var(--input-focus);
+  color: var(--input-border-focus);
 }
 
 .group:hover .group-hover\:text-border {
@@ -24468,7 +24468,7 @@ video {
 }
 
 .focus-within\:text-input-border-focus:focus-within {
-  color: var(--input-focus);
+  color: var(--input-border-focus);
 }
 
 .focus-within\:text-border:focus-within {
@@ -24918,7 +24918,7 @@ video {
 }
 
 .hover\:text-input-border-focus:hover {
-  color: var(--input-focus);
+  color: var(--input-border-focus);
 }
 
 .hover\:text-border:hover {
@@ -25368,7 +25368,7 @@ video {
 }
 
 .focus\:text-input-border-focus:focus {
-  color: var(--input-focus);
+  color: var(--input-border-focus);
 }
 
 .focus\:text-border:focus {
@@ -30230,12 +30230,12 @@ video {
   --border: hsl(var(--primary-hue), var(--border-saturation), var(--border-lightness));
   --input: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) + var(--input-lightness-modifier)));
   --input-border: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
-  --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
+  --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - (var(--input-lightness-modifier) * 3)));
 }
 
 :root {
   --primary-hue: 220;
-  --link-hue: 360;
+  --link-hue: 220;
   --bg-saturation: 0%;
   --bg-lightness: 98%;
   --text-saturation: 0%;
@@ -30264,12 +30264,13 @@ video {
   --border: hsl(var(--primary-hue), var(--border-saturation), var(--border-lightness));
   --input: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) + var(--input-lightness-modifier)));
   --input-border: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
-  --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
+  --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - (var(--input-lightness-modifier) * 3)));
 }
 
 header {
   --link-hue: 220;
-  --bg-lightness: 20%;
+  --bg-saturation: 15%;
+  --bg-lightness: 25%;
   --text-saturation: 20%;
   --text-lightness: 90%;
   --link-saturation: 20%;
@@ -30284,7 +30285,7 @@ header {
   --border: hsl(var(--primary-hue), var(--border-saturation), var(--border-lightness));
   --input: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) + var(--input-lightness-modifier)));
   --input-border: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
-  --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
+  --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - (var(--input-lightness-modifier) * 3)));
 }
 
 /* =======================================================
@@ -30292,17 +30293,16 @@ General
 ======================================================= */
 
 html {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 html, body {
-  font-weight: 300;
   color: var(--text);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
   color: var(--header);
   letter-spacing: -0.025em;
 }
@@ -30310,6 +30310,15 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.25rem;
   line-height: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+h1 + h2 {
+  padding-top: 0px;
+}
+
+h2, h3, h4, h5, h6 {
+  padding-top: 1rem;
 }
 
 h2 {
@@ -30323,7 +30332,7 @@ h3 {
 }
 
 p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 ul {
@@ -30402,6 +30411,21 @@ Article
   padding-left: 1.5rem;
 }
 
+.content-main a:not(.superplain) {
+  font-weight: 500;
+}
+
+.content-main a[target='_blank']:not(.superplain), .content-main a.link-with-arrow {
+  position: relative;
+}
+
+.content-main a[target='_blank']:not(.superplain)::after, .content-main a.link-with-arrow::after {
+  content: "\f30b";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-left: 0.5rem;
+}
+
 .content-main label {
   display: block;
   font-weight: 700;
@@ -30436,6 +30460,10 @@ Article
   padding: 1rem;
 }
 
+.content-main .wp-block-latest-posts {
+  padding-left: 0px;
+}
+
 .content-main .screen-reader-text {
   display: none;
 }
@@ -30445,7 +30473,7 @@ Article
   border-radius: 0.25rem;
   border-width: 1px;
   display: inline-block;
-  font-weight: 600;
+  font-weight: 500;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.75rem;
@@ -31946,7 +31974,7 @@ Comments
   }
 
   .sm\:divide-input-border-focus > :not([hidden]) ~ :not([hidden]) {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .sm\:divide-border > :not([hidden]) ~ :not([hidden]) {
@@ -32579,7 +32607,7 @@ Comments
   }
 
   .sm\:bg-input-border-focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .sm\:bg-border {
@@ -33029,7 +33057,7 @@ Comments
   }
 
   .group:hover .sm\:group-hover\:bg-input-border-focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .group:hover .sm\:group-hover\:bg-border {
@@ -33479,7 +33507,7 @@ Comments
   }
 
   .sm\:focus-within\:bg-input-border-focus:focus-within {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .sm\:focus-within\:bg-border:focus-within {
@@ -33929,7 +33957,7 @@ Comments
   }
 
   .sm\:hover\:bg-input-border-focus:hover {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .sm\:hover\:bg-border:hover {
@@ -34379,7 +34407,7 @@ Comments
   }
 
   .sm\:focus\:bg-input-border-focus:focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .sm\:focus\:bg-border:focus {
@@ -34870,7 +34898,7 @@ Comments
   }
 
   .sm\:from-input-border-focus {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -35243,7 +35271,7 @@ Comments
   }
 
   .sm\:via-input-border-focus {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .sm\:via-border {
@@ -35611,7 +35639,7 @@ Comments
   }
 
   .sm\:to-input-border-focus {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .sm\:to-border {
@@ -36066,7 +36094,7 @@ Comments
   }
 
   .sm\:hover\:from-input-border-focus:hover {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -36439,7 +36467,7 @@ Comments
   }
 
   .sm\:hover\:via-input-border-focus:hover {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .sm\:hover\:via-border:hover {
@@ -36807,7 +36835,7 @@ Comments
   }
 
   .sm\:hover\:to-input-border-focus:hover {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .sm\:hover\:to-border:hover {
@@ -37262,7 +37290,7 @@ Comments
   }
 
   .sm\:focus\:from-input-border-focus:focus {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -37635,7 +37663,7 @@ Comments
   }
 
   .sm\:focus\:via-input-border-focus:focus {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .sm\:focus\:via-border:focus {
@@ -38003,7 +38031,7 @@ Comments
   }
 
   .sm\:focus\:to-input-border-focus:focus {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .sm\:focus\:to-border:focus {
@@ -38833,7 +38861,7 @@ Comments
   }
 
   .sm\:border-input-border-focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .sm\:border-border {
@@ -39283,7 +39311,7 @@ Comments
   }
 
   .group:hover .sm\:group-hover\:border-input-border-focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .group:hover .sm\:group-hover\:border-border {
@@ -39733,7 +39761,7 @@ Comments
   }
 
   .sm\:focus-within\:border-input-border-focus:focus-within {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .sm\:focus-within\:border-border:focus-within {
@@ -40183,7 +40211,7 @@ Comments
   }
 
   .sm\:hover\:border-input-border-focus:hover {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .sm\:hover\:border-border:hover {
@@ -40633,7 +40661,7 @@ Comments
   }
 
   .sm\:focus\:border-input-border-focus:focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .sm\:focus\:border-border:focus {
@@ -41889,7 +41917,7 @@ Comments
   }
 
   .sm\:font-sans {
-    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+    font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
   }
 
   .sm\:font-serif {
@@ -46657,7 +46685,7 @@ Comments
   }
 
   .sm\:placeholder-input-border-focus::placeholder {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .sm\:placeholder-border::placeholder {
@@ -47107,7 +47135,7 @@ Comments
   }
 
   .sm\:focus\:placeholder-input-border-focus:focus::placeholder {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .sm\:focus\:placeholder-border:focus::placeholder {
@@ -50764,7 +50792,7 @@ Comments
   }
 
   .sm\:ring-offset-input-border-focus {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .sm\:ring-offset-border {
@@ -51132,7 +51160,7 @@ Comments
   }
 
   .sm\:focus-within\:ring-offset-input-border-focus:focus-within {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .sm\:focus-within\:ring-offset-border:focus-within {
@@ -51500,7 +51528,7 @@ Comments
   }
 
   .sm\:focus\:ring-offset-input-border-focus:focus {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .sm\:focus\:ring-offset-border:focus {
@@ -52010,7 +52038,7 @@ Comments
   }
 
   .sm\:ring-input-border-focus {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .sm\:ring-border {
@@ -52460,7 +52488,7 @@ Comments
   }
 
   .sm\:focus-within\:ring-input-border-focus:focus-within {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .sm\:focus-within\:ring-border:focus-within {
@@ -52910,7 +52938,7 @@ Comments
   }
 
   .sm\:focus\:ring-input-border-focus:focus {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .sm\:focus\:ring-border:focus {
@@ -53584,7 +53612,7 @@ Comments
   }
 
   .sm\:text-input-border-focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .sm\:text-border {
@@ -54034,7 +54062,7 @@ Comments
   }
 
   .group:hover .sm\:group-hover\:text-input-border-focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .group:hover .sm\:group-hover\:text-border {
@@ -54484,7 +54512,7 @@ Comments
   }
 
   .sm\:focus-within\:text-input-border-focus:focus-within {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .sm\:focus-within\:text-border:focus-within {
@@ -54934,7 +54962,7 @@ Comments
   }
 
   .sm\:hover\:text-input-border-focus:hover {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .sm\:hover\:text-border:hover {
@@ -55384,7 +55412,7 @@ Comments
   }
 
   .sm\:focus\:text-input-border-focus:focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .sm\:focus\:text-border:focus {
@@ -61590,7 +61618,7 @@ Comments
   }
 
   .md\:divide-input-border-focus > :not([hidden]) ~ :not([hidden]) {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .md\:divide-border > :not([hidden]) ~ :not([hidden]) {
@@ -62223,7 +62251,7 @@ Comments
   }
 
   .md\:bg-input-border-focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .md\:bg-border {
@@ -62673,7 +62701,7 @@ Comments
   }
 
   .group:hover .md\:group-hover\:bg-input-border-focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .group:hover .md\:group-hover\:bg-border {
@@ -63123,7 +63151,7 @@ Comments
   }
 
   .md\:focus-within\:bg-input-border-focus:focus-within {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .md\:focus-within\:bg-border:focus-within {
@@ -63573,7 +63601,7 @@ Comments
   }
 
   .md\:hover\:bg-input-border-focus:hover {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .md\:hover\:bg-border:hover {
@@ -64023,7 +64051,7 @@ Comments
   }
 
   .md\:focus\:bg-input-border-focus:focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .md\:focus\:bg-border:focus {
@@ -64514,7 +64542,7 @@ Comments
   }
 
   .md\:from-input-border-focus {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -64887,7 +64915,7 @@ Comments
   }
 
   .md\:via-input-border-focus {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .md\:via-border {
@@ -65255,7 +65283,7 @@ Comments
   }
 
   .md\:to-input-border-focus {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .md\:to-border {
@@ -65710,7 +65738,7 @@ Comments
   }
 
   .md\:hover\:from-input-border-focus:hover {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -66083,7 +66111,7 @@ Comments
   }
 
   .md\:hover\:via-input-border-focus:hover {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .md\:hover\:via-border:hover {
@@ -66451,7 +66479,7 @@ Comments
   }
 
   .md\:hover\:to-input-border-focus:hover {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .md\:hover\:to-border:hover {
@@ -66906,7 +66934,7 @@ Comments
   }
 
   .md\:focus\:from-input-border-focus:focus {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -67279,7 +67307,7 @@ Comments
   }
 
   .md\:focus\:via-input-border-focus:focus {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .md\:focus\:via-border:focus {
@@ -67647,7 +67675,7 @@ Comments
   }
 
   .md\:focus\:to-input-border-focus:focus {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .md\:focus\:to-border:focus {
@@ -68477,7 +68505,7 @@ Comments
   }
 
   .md\:border-input-border-focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .md\:border-border {
@@ -68927,7 +68955,7 @@ Comments
   }
 
   .group:hover .md\:group-hover\:border-input-border-focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .group:hover .md\:group-hover\:border-border {
@@ -69377,7 +69405,7 @@ Comments
   }
 
   .md\:focus-within\:border-input-border-focus:focus-within {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .md\:focus-within\:border-border:focus-within {
@@ -69827,7 +69855,7 @@ Comments
   }
 
   .md\:hover\:border-input-border-focus:hover {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .md\:hover\:border-border:hover {
@@ -70277,7 +70305,7 @@ Comments
   }
 
   .md\:focus\:border-input-border-focus:focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .md\:focus\:border-border:focus {
@@ -71533,7 +71561,7 @@ Comments
   }
 
   .md\:font-sans {
-    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+    font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
   }
 
   .md\:font-serif {
@@ -76301,7 +76329,7 @@ Comments
   }
 
   .md\:placeholder-input-border-focus::placeholder {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .md\:placeholder-border::placeholder {
@@ -76751,7 +76779,7 @@ Comments
   }
 
   .md\:focus\:placeholder-input-border-focus:focus::placeholder {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .md\:focus\:placeholder-border:focus::placeholder {
@@ -80408,7 +80436,7 @@ Comments
   }
 
   .md\:ring-offset-input-border-focus {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .md\:ring-offset-border {
@@ -80776,7 +80804,7 @@ Comments
   }
 
   .md\:focus-within\:ring-offset-input-border-focus:focus-within {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .md\:focus-within\:ring-offset-border:focus-within {
@@ -81144,7 +81172,7 @@ Comments
   }
 
   .md\:focus\:ring-offset-input-border-focus:focus {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .md\:focus\:ring-offset-border:focus {
@@ -81654,7 +81682,7 @@ Comments
   }
 
   .md\:ring-input-border-focus {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .md\:ring-border {
@@ -82104,7 +82132,7 @@ Comments
   }
 
   .md\:focus-within\:ring-input-border-focus:focus-within {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .md\:focus-within\:ring-border:focus-within {
@@ -82554,7 +82582,7 @@ Comments
   }
 
   .md\:focus\:ring-input-border-focus:focus {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .md\:focus\:ring-border:focus {
@@ -83228,7 +83256,7 @@ Comments
   }
 
   .md\:text-input-border-focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .md\:text-border {
@@ -83678,7 +83706,7 @@ Comments
   }
 
   .group:hover .md\:group-hover\:text-input-border-focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .group:hover .md\:group-hover\:text-border {
@@ -84128,7 +84156,7 @@ Comments
   }
 
   .md\:focus-within\:text-input-border-focus:focus-within {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .md\:focus-within\:text-border:focus-within {
@@ -84578,7 +84606,7 @@ Comments
   }
 
   .md\:hover\:text-input-border-focus:hover {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .md\:hover\:text-border:hover {
@@ -85028,7 +85056,7 @@ Comments
   }
 
   .md\:focus\:text-input-border-focus:focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .md\:focus\:text-border:focus {
@@ -91234,7 +91262,7 @@ Comments
   }
 
   .lg\:divide-input-border-focus > :not([hidden]) ~ :not([hidden]) {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .lg\:divide-border > :not([hidden]) ~ :not([hidden]) {
@@ -91867,7 +91895,7 @@ Comments
   }
 
   .lg\:bg-input-border-focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .lg\:bg-border {
@@ -92317,7 +92345,7 @@ Comments
   }
 
   .group:hover .lg\:group-hover\:bg-input-border-focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .group:hover .lg\:group-hover\:bg-border {
@@ -92767,7 +92795,7 @@ Comments
   }
 
   .lg\:focus-within\:bg-input-border-focus:focus-within {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .lg\:focus-within\:bg-border:focus-within {
@@ -93217,7 +93245,7 @@ Comments
   }
 
   .lg\:hover\:bg-input-border-focus:hover {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .lg\:hover\:bg-border:hover {
@@ -93667,7 +93695,7 @@ Comments
   }
 
   .lg\:focus\:bg-input-border-focus:focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .lg\:focus\:bg-border:focus {
@@ -94158,7 +94186,7 @@ Comments
   }
 
   .lg\:from-input-border-focus {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -94531,7 +94559,7 @@ Comments
   }
 
   .lg\:via-input-border-focus {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .lg\:via-border {
@@ -94899,7 +94927,7 @@ Comments
   }
 
   .lg\:to-input-border-focus {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .lg\:to-border {
@@ -95354,7 +95382,7 @@ Comments
   }
 
   .lg\:hover\:from-input-border-focus:hover {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -95727,7 +95755,7 @@ Comments
   }
 
   .lg\:hover\:via-input-border-focus:hover {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .lg\:hover\:via-border:hover {
@@ -96095,7 +96123,7 @@ Comments
   }
 
   .lg\:hover\:to-input-border-focus:hover {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .lg\:hover\:to-border:hover {
@@ -96550,7 +96578,7 @@ Comments
   }
 
   .lg\:focus\:from-input-border-focus:focus {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -96923,7 +96951,7 @@ Comments
   }
 
   .lg\:focus\:via-input-border-focus:focus {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .lg\:focus\:via-border:focus {
@@ -97291,7 +97319,7 @@ Comments
   }
 
   .lg\:focus\:to-input-border-focus:focus {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .lg\:focus\:to-border:focus {
@@ -98121,7 +98149,7 @@ Comments
   }
 
   .lg\:border-input-border-focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .lg\:border-border {
@@ -98571,7 +98599,7 @@ Comments
   }
 
   .group:hover .lg\:group-hover\:border-input-border-focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .group:hover .lg\:group-hover\:border-border {
@@ -99021,7 +99049,7 @@ Comments
   }
 
   .lg\:focus-within\:border-input-border-focus:focus-within {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .lg\:focus-within\:border-border:focus-within {
@@ -99471,7 +99499,7 @@ Comments
   }
 
   .lg\:hover\:border-input-border-focus:hover {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .lg\:hover\:border-border:hover {
@@ -99921,7 +99949,7 @@ Comments
   }
 
   .lg\:focus\:border-input-border-focus:focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .lg\:focus\:border-border:focus {
@@ -101177,7 +101205,7 @@ Comments
   }
 
   .lg\:font-sans {
-    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+    font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
   }
 
   .lg\:font-serif {
@@ -105945,7 +105973,7 @@ Comments
   }
 
   .lg\:placeholder-input-border-focus::placeholder {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .lg\:placeholder-border::placeholder {
@@ -106395,7 +106423,7 @@ Comments
   }
 
   .lg\:focus\:placeholder-input-border-focus:focus::placeholder {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .lg\:focus\:placeholder-border:focus::placeholder {
@@ -110052,7 +110080,7 @@ Comments
   }
 
   .lg\:ring-offset-input-border-focus {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .lg\:ring-offset-border {
@@ -110420,7 +110448,7 @@ Comments
   }
 
   .lg\:focus-within\:ring-offset-input-border-focus:focus-within {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .lg\:focus-within\:ring-offset-border:focus-within {
@@ -110788,7 +110816,7 @@ Comments
   }
 
   .lg\:focus\:ring-offset-input-border-focus:focus {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .lg\:focus\:ring-offset-border:focus {
@@ -111298,7 +111326,7 @@ Comments
   }
 
   .lg\:ring-input-border-focus {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .lg\:ring-border {
@@ -111748,7 +111776,7 @@ Comments
   }
 
   .lg\:focus-within\:ring-input-border-focus:focus-within {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .lg\:focus-within\:ring-border:focus-within {
@@ -112198,7 +112226,7 @@ Comments
   }
 
   .lg\:focus\:ring-input-border-focus:focus {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .lg\:focus\:ring-border:focus {
@@ -112872,7 +112900,7 @@ Comments
   }
 
   .lg\:text-input-border-focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .lg\:text-border {
@@ -113322,7 +113350,7 @@ Comments
   }
 
   .group:hover .lg\:group-hover\:text-input-border-focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .group:hover .lg\:group-hover\:text-border {
@@ -113772,7 +113800,7 @@ Comments
   }
 
   .lg\:focus-within\:text-input-border-focus:focus-within {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .lg\:focus-within\:text-border:focus-within {
@@ -114222,7 +114250,7 @@ Comments
   }
 
   .lg\:hover\:text-input-border-focus:hover {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .lg\:hover\:text-border:hover {
@@ -114672,7 +114700,7 @@ Comments
   }
 
   .lg\:focus\:text-input-border-focus:focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .lg\:focus\:text-border:focus {
@@ -120878,7 +120906,7 @@ Comments
   }
 
   .xl\:divide-input-border-focus > :not([hidden]) ~ :not([hidden]) {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .xl\:divide-border > :not([hidden]) ~ :not([hidden]) {
@@ -121511,7 +121539,7 @@ Comments
   }
 
   .xl\:bg-input-border-focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .xl\:bg-border {
@@ -121961,7 +121989,7 @@ Comments
   }
 
   .group:hover .xl\:group-hover\:bg-input-border-focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .group:hover .xl\:group-hover\:bg-border {
@@ -122411,7 +122439,7 @@ Comments
   }
 
   .xl\:focus-within\:bg-input-border-focus:focus-within {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .xl\:focus-within\:bg-border:focus-within {
@@ -122861,7 +122889,7 @@ Comments
   }
 
   .xl\:hover\:bg-input-border-focus:hover {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .xl\:hover\:bg-border:hover {
@@ -123311,7 +123339,7 @@ Comments
   }
 
   .xl\:focus\:bg-input-border-focus:focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .xl\:focus\:bg-border:focus {
@@ -123802,7 +123830,7 @@ Comments
   }
 
   .xl\:from-input-border-focus {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -124175,7 +124203,7 @@ Comments
   }
 
   .xl\:via-input-border-focus {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .xl\:via-border {
@@ -124543,7 +124571,7 @@ Comments
   }
 
   .xl\:to-input-border-focus {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .xl\:to-border {
@@ -124998,7 +125026,7 @@ Comments
   }
 
   .xl\:hover\:from-input-border-focus:hover {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -125371,7 +125399,7 @@ Comments
   }
 
   .xl\:hover\:via-input-border-focus:hover {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .xl\:hover\:via-border:hover {
@@ -125739,7 +125767,7 @@ Comments
   }
 
   .xl\:hover\:to-input-border-focus:hover {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .xl\:hover\:to-border:hover {
@@ -126194,7 +126222,7 @@ Comments
   }
 
   .xl\:focus\:from-input-border-focus:focus {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -126567,7 +126595,7 @@ Comments
   }
 
   .xl\:focus\:via-input-border-focus:focus {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .xl\:focus\:via-border:focus {
@@ -126935,7 +126963,7 @@ Comments
   }
 
   .xl\:focus\:to-input-border-focus:focus {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .xl\:focus\:to-border:focus {
@@ -127765,7 +127793,7 @@ Comments
   }
 
   .xl\:border-input-border-focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .xl\:border-border {
@@ -128215,7 +128243,7 @@ Comments
   }
 
   .group:hover .xl\:group-hover\:border-input-border-focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .group:hover .xl\:group-hover\:border-border {
@@ -128665,7 +128693,7 @@ Comments
   }
 
   .xl\:focus-within\:border-input-border-focus:focus-within {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .xl\:focus-within\:border-border:focus-within {
@@ -129115,7 +129143,7 @@ Comments
   }
 
   .xl\:hover\:border-input-border-focus:hover {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .xl\:hover\:border-border:hover {
@@ -129565,7 +129593,7 @@ Comments
   }
 
   .xl\:focus\:border-input-border-focus:focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .xl\:focus\:border-border:focus {
@@ -130821,7 +130849,7 @@ Comments
   }
 
   .xl\:font-sans {
-    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+    font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
   }
 
   .xl\:font-serif {
@@ -135589,7 +135617,7 @@ Comments
   }
 
   .xl\:placeholder-input-border-focus::placeholder {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .xl\:placeholder-border::placeholder {
@@ -136039,7 +136067,7 @@ Comments
   }
 
   .xl\:focus\:placeholder-input-border-focus:focus::placeholder {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .xl\:focus\:placeholder-border:focus::placeholder {
@@ -139696,7 +139724,7 @@ Comments
   }
 
   .xl\:ring-offset-input-border-focus {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .xl\:ring-offset-border {
@@ -140064,7 +140092,7 @@ Comments
   }
 
   .xl\:focus-within\:ring-offset-input-border-focus:focus-within {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .xl\:focus-within\:ring-offset-border:focus-within {
@@ -140432,7 +140460,7 @@ Comments
   }
 
   .xl\:focus\:ring-offset-input-border-focus:focus {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .xl\:focus\:ring-offset-border:focus {
@@ -140942,7 +140970,7 @@ Comments
   }
 
   .xl\:ring-input-border-focus {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .xl\:ring-border {
@@ -141392,7 +141420,7 @@ Comments
   }
 
   .xl\:focus-within\:ring-input-border-focus:focus-within {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .xl\:focus-within\:ring-border:focus-within {
@@ -141842,7 +141870,7 @@ Comments
   }
 
   .xl\:focus\:ring-input-border-focus:focus {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .xl\:focus\:ring-border:focus {
@@ -142516,7 +142544,7 @@ Comments
   }
 
   .xl\:text-input-border-focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .xl\:text-border {
@@ -142966,7 +142994,7 @@ Comments
   }
 
   .group:hover .xl\:group-hover\:text-input-border-focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .group:hover .xl\:group-hover\:text-border {
@@ -143416,7 +143444,7 @@ Comments
   }
 
   .xl\:focus-within\:text-input-border-focus:focus-within {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .xl\:focus-within\:text-border:focus-within {
@@ -143866,7 +143894,7 @@ Comments
   }
 
   .xl\:hover\:text-input-border-focus:hover {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .xl\:hover\:text-border:hover {
@@ -144316,7 +144344,7 @@ Comments
   }
 
   .xl\:focus\:text-input-border-focus:focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .xl\:focus\:text-border:focus {
@@ -150522,7 +150550,7 @@ Comments
   }
 
   .\32xl\:divide-input-border-focus > :not([hidden]) ~ :not([hidden]) {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .\32xl\:divide-border > :not([hidden]) ~ :not([hidden]) {
@@ -151155,7 +151183,7 @@ Comments
   }
 
   .\32xl\:bg-input-border-focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .\32xl\:bg-border {
@@ -151605,7 +151633,7 @@ Comments
   }
 
   .group:hover .\32xl\:group-hover\:bg-input-border-focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .group:hover .\32xl\:group-hover\:bg-border {
@@ -152055,7 +152083,7 @@ Comments
   }
 
   .\32xl\:focus-within\:bg-input-border-focus:focus-within {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .\32xl\:focus-within\:bg-border:focus-within {
@@ -152505,7 +152533,7 @@ Comments
   }
 
   .\32xl\:hover\:bg-input-border-focus:hover {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .\32xl\:hover\:bg-border:hover {
@@ -152955,7 +152983,7 @@ Comments
   }
 
   .\32xl\:focus\:bg-input-border-focus:focus {
-    background-color: var(--input-focus);
+    background-color: var(--input-border-focus);
   }
 
   .\32xl\:focus\:bg-border:focus {
@@ -153446,7 +153474,7 @@ Comments
   }
 
   .\32xl\:from-input-border-focus {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -153819,7 +153847,7 @@ Comments
   }
 
   .\32xl\:via-input-border-focus {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .\32xl\:via-border {
@@ -154187,7 +154215,7 @@ Comments
   }
 
   .\32xl\:to-input-border-focus {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .\32xl\:to-border {
@@ -154642,7 +154670,7 @@ Comments
   }
 
   .\32xl\:hover\:from-input-border-focus:hover {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -155015,7 +155043,7 @@ Comments
   }
 
   .\32xl\:hover\:via-input-border-focus:hover {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .\32xl\:hover\:via-border:hover {
@@ -155383,7 +155411,7 @@ Comments
   }
 
   .\32xl\:hover\:to-input-border-focus:hover {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .\32xl\:hover\:to-border:hover {
@@ -155838,7 +155866,7 @@ Comments
   }
 
   .\32xl\:focus\:from-input-border-focus:focus {
-    --tw-gradient-from: var(--input-focus);
+    --tw-gradient-from: var(--input-border-focus);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
@@ -156211,7 +156239,7 @@ Comments
   }
 
   .\32xl\:focus\:via-input-border-focus:focus {
-    --tw-gradient-stops: var(--tw-gradient-from), var(--input-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--input-border-focus), var(--tw-gradient-to, rgba(255, 255, 255, 0));
   }
 
   .\32xl\:focus\:via-border:focus {
@@ -156579,7 +156607,7 @@ Comments
   }
 
   .\32xl\:focus\:to-input-border-focus:focus {
-    --tw-gradient-to: var(--input-focus);
+    --tw-gradient-to: var(--input-border-focus);
   }
 
   .\32xl\:focus\:to-border:focus {
@@ -157409,7 +157437,7 @@ Comments
   }
 
   .\32xl\:border-input-border-focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .\32xl\:border-border {
@@ -157859,7 +157887,7 @@ Comments
   }
 
   .group:hover .\32xl\:group-hover\:border-input-border-focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .group:hover .\32xl\:group-hover\:border-border {
@@ -158309,7 +158337,7 @@ Comments
   }
 
   .\32xl\:focus-within\:border-input-border-focus:focus-within {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .\32xl\:focus-within\:border-border:focus-within {
@@ -158759,7 +158787,7 @@ Comments
   }
 
   .\32xl\:hover\:border-input-border-focus:hover {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .\32xl\:hover\:border-border:hover {
@@ -159209,7 +159237,7 @@ Comments
   }
 
   .\32xl\:focus\:border-input-border-focus:focus {
-    border-color: var(--input-focus);
+    border-color: var(--input-border-focus);
   }
 
   .\32xl\:focus\:border-border:focus {
@@ -160465,7 +160493,7 @@ Comments
   }
 
   .\32xl\:font-sans {
-    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+    font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
   }
 
   .\32xl\:font-serif {
@@ -165233,7 +165261,7 @@ Comments
   }
 
   .\32xl\:placeholder-input-border-focus::placeholder {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .\32xl\:placeholder-border::placeholder {
@@ -165683,7 +165711,7 @@ Comments
   }
 
   .\32xl\:focus\:placeholder-input-border-focus:focus::placeholder {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .\32xl\:focus\:placeholder-border:focus::placeholder {
@@ -169340,7 +169368,7 @@ Comments
   }
 
   .\32xl\:ring-offset-input-border-focus {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .\32xl\:ring-offset-border {
@@ -169708,7 +169736,7 @@ Comments
   }
 
   .\32xl\:focus-within\:ring-offset-input-border-focus:focus-within {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .\32xl\:focus-within\:ring-offset-border:focus-within {
@@ -170076,7 +170104,7 @@ Comments
   }
 
   .\32xl\:focus\:ring-offset-input-border-focus:focus {
-    --tw-ring-offset-color: var(--input-focus);
+    --tw-ring-offset-color: var(--input-border-focus);
   }
 
   .\32xl\:focus\:ring-offset-border:focus {
@@ -170586,7 +170614,7 @@ Comments
   }
 
   .\32xl\:ring-input-border-focus {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .\32xl\:ring-border {
@@ -171036,7 +171064,7 @@ Comments
   }
 
   .\32xl\:focus-within\:ring-input-border-focus:focus-within {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .\32xl\:focus-within\:ring-border:focus-within {
@@ -171486,7 +171514,7 @@ Comments
   }
 
   .\32xl\:focus\:ring-input-border-focus:focus {
-    --tw-ring-color: var(--input-focus);
+    --tw-ring-color: var(--input-border-focus);
   }
 
   .\32xl\:focus\:ring-border:focus {
@@ -172160,7 +172188,7 @@ Comments
   }
 
   .\32xl\:text-input-border-focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .\32xl\:text-border {
@@ -172610,7 +172638,7 @@ Comments
   }
 
   .group:hover .\32xl\:group-hover\:text-input-border-focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .group:hover .\32xl\:group-hover\:text-border {
@@ -173060,7 +173088,7 @@ Comments
   }
 
   .\32xl\:focus-within\:text-input-border-focus:focus-within {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .\32xl\:focus-within\:text-border:focus-within {
@@ -173510,7 +173538,7 @@ Comments
   }
 
   .\32xl\:hover\:text-input-border-focus:hover {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .\32xl\:hover\:text-border:hover {
@@ -173960,7 +173988,7 @@ Comments
   }
 
   .\32xl\:focus\:text-input-border-focus:focus {
-    color: var(--input-focus);
+    color: var(--input-border-focus);
   }
 
   .\32xl\:focus\:text-border:focus {

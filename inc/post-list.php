@@ -1,12 +1,10 @@
-<div class="space-y-6 post-list">
+<div class="space-y-8 post-list">
   <?php if (have_posts()) : while(have_posts()) : the_post();?>
   <article class="overflow-x-hidden">
     <div class="mb-4 lg:flex">
       <div>
-        <a class="text-xl tracking-tight" href="<?php the_permalink();?>">
-          <?php the_title();?>
-        </a>
-        <div class="mt-1">
+        <h3><?php the_title();?></h3>
+        <div class="-mt-4">
           <?php include(get_template_directory() . '/inc/post-date.php');?>
         </div>
       </div>
@@ -16,6 +14,10 @@
     </div>
 
     <?php the_excerpt();?>
+
+    <div>
+      <a class="link-with-arrow" href="<?php the_permalink();?>">Jetzt lesen</i></a>
+    </div>
   </article>
   <?php endwhile;?>
 

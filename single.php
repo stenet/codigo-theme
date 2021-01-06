@@ -3,10 +3,10 @@
 <article>
   <div class="lg:flex">
     <div>
-      <div class="mb-6">
+      <div>
         <?php include(get_template_directory() . '/inc/wp-title.php');?>
       </div>
-      <div class="mb-5 -mt-5">
+      <div class="mb-8 -mt-8">
         <?php include(get_template_directory() . '/inc/post-date.php');?>
       </div>
     </div>

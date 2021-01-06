@@ -6,11 +6,10 @@ function load_javascripts() {
 }
 
 function load_stylesheets() {
-  wp_register_style("font", "https://fonts.googleapis.com/css?family=Roboto:300,500,700");
   wp_register_style("fontawesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
   wp_enqueue_style("fontawesome");
 
-  wp_register_style("style", get_template_directory_uri() . "/styles.css", array("font", "fontawesome"));
+  wp_register_style("style", get_template_directory_uri() . "/styles.css", array("fontawesome"));
   wp_enqueue_style("style");
 }
 

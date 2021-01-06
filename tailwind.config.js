@@ -31,13 +31,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "sans": ["Roboto", "'Helvetica Neue'", "Helvetica", "Arial", "'sans-serif'"]
+        "sans": ["Segoe UI", "SegoeUI", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"]
       },
       colors: {
         "bg": "var(--bg)",
         "input": "var(--input)",
         "input-border": "var(--input-border)",
-        "input-border-focus": "var(--input-focus)",
+        "input-border-focus": "var(--input-border-focus)",
         "border": "var(--border)",
         "text": "var(--text)",
         "header": "var(--header)",

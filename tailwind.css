@@ -10,12 +10,12 @@
   --border: hsl(var(--primary-hue), var(--border-saturation), var(--border-lightness));
   --input: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) + var(--input-lightness-modifier)));
   --input-border: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
-  --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
+  --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - (var(--input-lightness-modifier) * 3)));
 }
 
 :root {
   --primary-hue: 220;
-  --link-hue: 360;
+  --link-hue: 220;
 
   --bg-saturation: 0%;
   --bg-lightness: 98%;
@@ -48,7 +48,8 @@
 }
 header {
   --link-hue: 220;
-  --bg-lightness: 20%;
+  --bg-saturation: 15%;
+  --bg-lightness: 25%;
   --text-saturation: 20%;
   --text-lightness: 90%;
   --link-saturation: 20%;
@@ -65,17 +66,23 @@ General
 ======================================================= */
 
 html {
-  font-size: 16px;
+  font-size: 15px;
 }
 html, body {
-  @apply font-light text-text;
+  @apply text-text;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply mb-6 font-medium tracking-tight text-header;
+  @apply pb-4 font-medium tracking-tight text-header;
 }
 h1 {
-  @apply text-4xl;
+  @apply pb-8 text-4xl;
+}
+h1 + h2 {
+  @apply pt-0;
+}
+h2, h3, h4, h5, h6 {
+  @apply pt-4;
 }
 h2 {
   @apply text-2xl;
@@ -85,7 +92,7 @@ h3 {
 }
 
 p {
-  @apply mb-6;
+  @apply mb-4;
 }
 
 ul {
@@ -147,6 +154,16 @@ Article
   @apply font-medium;
 }
 
+.content-main a[target='_blank']:not(.superplain), .content-main a.link-with-arrow {
+  @apply relative;
+}
+.content-main a[target='_blank']:not(.superplain)::after, .content-main a.link-with-arrow::after {
+  content: "\f30b";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-left: 0.5rem;
+}
+
 .content-main label {
   @apply block mb-2 font-bold;
 }
@@ -160,6 +177,10 @@ Article
 }
 .content-main pre {
   @apply p-4 mb-6 text-sm border-l-2 border-link bg-border;
+}
+
+.content-main .wp-block-latest-posts {
+  @apply pl-0;
 }
 
 .content-main .screen-reader-text {
