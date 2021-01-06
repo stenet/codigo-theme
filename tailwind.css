@@ -96,7 +96,7 @@ ul > li {
 }
 
 a:not(.superplain) {
-  @apply text-link;
+  @apply text-link font-semibold;
 }
 a:not(.superplain):hover {
   --link: hsl(var(--link-hue), calc(var(--link-saturation) + var(--link-saturation-hover)), calc(var(--link-lightness) + var(--link-lightness-hover)));
