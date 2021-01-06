@@ -144,7 +144,7 @@ Article
 }
 
 .content-main a:not(.superplain) {
-  @apply font-semibold;
+  @apply font-medium;
 }
 
 .content-main label {
@@ -166,7 +166,7 @@ Article
   @apply hidden;
 }
 .content-main .page-numbers {
-  @apply inline-block px-3 py-1 font-semibold border rounded border-border text-text;
+  @apply inline-block px-3 py-1 font-medium border rounded border-border text-text;
 }
 .content-main a.page-numbers {
   @apply text-text;
