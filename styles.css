@@ -30626,8 +30626,9 @@ Article
 ======================================================= */
 
 .content-main ul {
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-type: square;
+  padding-left: 1.5rem;
 }
 
 .content-main label {

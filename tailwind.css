@@ -106,7 +106,7 @@ Article
 ======================================================= */
 
 .content-main ul {
-  @apply list-inside list-square;
+  @apply pl-6 list-outside list-square;
 }
 
 .content-main label {
