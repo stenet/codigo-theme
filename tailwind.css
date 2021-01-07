@@ -98,7 +98,7 @@ h3 {
   @apply text-xl;
 }
 
-p {
+p, article > div {
   @apply mb-4;
 }
 

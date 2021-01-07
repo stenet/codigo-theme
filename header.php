@@ -25,4 +25,4 @@
           </div>
         </header>
         
-        <div class="flex-auto px-4 py-8 lg:px-6 content-main lg:border-r lg:border-border bg-bg">       
+        <div class="flex-auto px-4 py-8 lg:px-8 content-main lg:border-r lg:border-border bg-bg">       
