@@ -30292,7 +30292,13 @@ General
 ======================================================= */
 
 html {
-  font-size: 15px;
+  font-size: 16px;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
 }
 
 html, body {
@@ -30435,30 +30441,6 @@ Article
   content: "\f30b";
 }
 
-.content-main label {
-  display: block;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.content-main input[type='checkbox'] {
-  -webkit-appearance: none;
-          appearance: none;
-  border-color: var(--border);
-  border-radius: 0.25rem;
-  border-width: 1px;
-  height: 1.25rem;
-  width: 1.25rem;
-}
-
-.content-main input[type='checkbox']:checked {
-  --tw-bg-opacity: 1;
-  background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
-}
-
 .content-main pre {
   background-color: var(--border);
   border-color: var(--link);
@@ -30546,25 +30528,26 @@ Comments
   outline-offset: 2px;
 }
 
-.post-container input:focus:not([type='checkbox']):not([type='submit']), .post-container textarea:focus {
-  --tw-border-opacity: 1;
-  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
-  border-width: 1px;
-}
-
 .post-container input:not([type='checkbox']):not([type='button']):not([type='submit']), .post-container textarea {
   -webkit-appearance: none;
           appearance: none;
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  border-color: var(--border);
-  border-radius: 0.375rem;
+  background-color: var(--input);
+  border-color: var(--input-border);
+}
+
+.post-container input:not([type='checkbox']):not([type='button']):not([type='submit']):focus, .post-container textarea:focus {
+  border-color: var(--input-border-focus);
+}
+
+.post-container input:not([type='checkbox']):not([type='button']):not([type='submit']), .post-container textarea {
+  border-radius: 0.25rem;
   border-width: 1px;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  color: var(--text);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .post-container button, .post-container input[type='button'], .post-container input[type='submit'] {
@@ -30578,6 +30561,8 @@ Comments
   font-weight: 700;
   font-size: 0.75rem;
   line-height: 1rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 1.5rem;
@@ -30585,6 +30570,32 @@ Comments
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   text-transform: uppercase;
+}
+
+.post-container label {
+  font-weight: 600;
+}
+
+.post-container label:first-child {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.post-container input[type='checkbox'] {
+  -webkit-appearance: none;
+          appearance: none;
+  border-color: var(--border);
+  border-radius: 0.25rem;
+  border-width: 1px;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.post-container input[type='checkbox']:checked {
+  background-color: var(--link);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
 }
 
 .comment-form-cookies-consent > :not([hidden]) ~ :not([hidden]) {
@@ -30595,6 +30606,7 @@ Comments
 
 .comment-form-cookies-consent {
   display: flex;
+  align-items: center;
 }
 
 .comment-form-cookies-consent input {

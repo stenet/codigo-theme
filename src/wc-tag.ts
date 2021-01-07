@@ -12,7 +12,7 @@ class WcTag extends HTMLElement {
     const shine = this.hasAttribute("tag-shine");
 
     const outer = document.createElement("div");
-    outer.classList.add("text-white", "px-2", "py-1", "mb-1", "rounded", "text-xs", "font-medium");
+    outer.classList.add("text-white", "px-2", "py-1", "mb-1", "rounded", "text-sm", "font-medium");
     outer.style.backgroundColor = `hsl(${tagColor}, ${shine ? "100%" : "60%"}, ${shine ? "50%" : "80%"})`;
     outer.style.color = `hsl(${tagColor}, ${shine ? "80%" : "60%"}, ${shine ? "100%" : "20%"})`;
     

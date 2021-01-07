@@ -3,12 +3,12 @@
   <article class="overflow-x-hidden">
     <div class="mb-4 lg:flex">
       <div>
-        <h3><?php the_title();?></h3>
+        <h2><?php the_title();?></h2>
         <div class="-mt-4">
           <?php include(get_template_directory() . '/inc/post-date.php');?>
         </div>
       </div>
-      <div class="flex-grow mt-6">
+      <div class="flex-grow -mt-2 lg:mt-6">
         <?php include(get_template_directory() . '/inc/post-category-tags.php');?>
       </div>
     </div>
