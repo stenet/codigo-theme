@@ -71,10 +71,31 @@ class WcAccordion extends HTMLElement {
       this._contentContainer.appendChild(this.childNodes.item(0));
     }
     this.appendChild(outer);
-
+    
+    this.registerResizeHandler();
     this.updateVisiblity(false);
   }
 
+
+  private registerResizeHandler() {
+    let oldWidth = window.outerWidth;
+
+    window.addEventListener("resize", () => {
+      if (oldWidth == window.outerWidth) {
+        return;
+      }
+
+      oldWidth = window.outerWidth;
+
+      if (!this._isContentVisible) {
+        return;
+      }
+
+      setTimeout(() => {
+        this.updateVisiblity(false);
+      }, 0);
+    });
+  }  
   private async updateVisiblity(animate = true) {
     const contentContainerHeight = Utils.getElementHeight(this._contentContainer!);
 

@@ -64,15 +64,16 @@ export default class NavMobileHandler {
     let oldWidth = window.outerWidth;
 
     window.addEventListener("resize", () => {
-      if (!this._isVisible) {
-        return;
-      }
-
       if (oldWidth == window.outerWidth) {
         return;
       }
 
       oldWidth = window.outerWidth;
+
+      if (!this._isVisible) {
+        return;
+      }
+
       this.toggle(0, 0, false);
     });
   }
