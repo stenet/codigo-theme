@@ -13,6 +13,9 @@ steps:
       - npm run build
       - rm /var/theme/* -rf
       - cp ./dist/* /var/theme -r
+    when:
+      branch:
+      - main
 
 volumes:
   - name: theme
