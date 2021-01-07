@@ -4,6 +4,7 @@ import NavMobileHandler from "./nav-mobile-handler";
 import "./wc-skill";
 import "./wc-tag";
 import "./wc-accordion";
+import "./wc-include";
 
 window.addEventListener("DOMContentLoaded", () => {
     PostComments.initialize();
