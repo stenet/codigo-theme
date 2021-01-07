@@ -19,7 +19,7 @@
       <a class="link-with-arrow" href="<?php the_permalink();?>">Jetzt lesen</i></a>
     </div>
 
-    <div class="h-px mt-4 bg-border"></div>
+    <div class="h-px mt-8 bg-border"></div>
   </article>
   <?php endwhile;?>
 
