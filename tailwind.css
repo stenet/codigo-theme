@@ -100,13 +100,6 @@ p {
   @apply mb-4;
 }
 
-ul {
-  @apply mb-5;
-}
-ul > li {
-  @apply mb-1;
-}
-
 a:not(.superplain) {
   @apply text-link;
 }
@@ -140,7 +133,7 @@ header .button-social:hover {
 }
 
 header .group {
-  @apply text-sm font-bold uppercase;
+  @apply text-lg font-bold uppercase lg:text-sm;
 }
 
 header .current-menu-item a {
@@ -152,7 +145,10 @@ Article
 ======================================================= */
 
 .content-main ul {
-  @apply pl-6 list-outside list-square;
+  @apply pl-6 mb-1 list-outside list-square;
+}
+.content-main ul > li {
+  @apply mb-1;
 }
 
 .content-main a:not(.superplain) {
