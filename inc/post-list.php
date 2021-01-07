@@ -1,4 +1,4 @@
-<div class="space-y-8 post-list">
+<div class="space-y-4 post-list">
   <?php if (have_posts()) : while(have_posts()) : the_post();?>
   <article class="overflow-x-hidden">
     <div class="mb-4 lg:flex">
@@ -18,6 +18,8 @@
     <div>
       <a class="link-with-arrow" href="<?php the_permalink();?>">Jetzt lesen</i></a>
     </div>
+
+    <div class="h-px mt-4 bg-border"></div>
   </article>
   <?php endwhile;?>
 

@@ -30247,7 +30247,7 @@ video {
   --link-saturation-hover: 20%;
   --link-lightness-hover: 0%;
   --border-saturation: 0%;
-  --border-lightness: 85%;
+  --border-lightness: 90%;
   --input-lightness-modifier: 10%;
   --green: #4caf4f;
   --green-hue: 122;
@@ -30276,6 +30276,8 @@ header {
   --link-lightness: 80%;
   --link-saturation-hover: 0%;
   --link-lightness-hover: 10%;
+  --border-saturation: 15%;
+  --border-lightness: 35%;
   --input-lightness-modifier: -10%;
   --bg: hsl(var(--primary-hue), var(--bg-saturation), var(--bg-lightness));
   --text: hsl(var(--primary-hue), var(--text-saturation), var(--text-lightness));
@@ -30407,9 +30409,23 @@ header .current-menu-item a {
   font-weight: 700;
 }
 
+header ul li {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  header ul li {
+    margin-bottom: 0px;
+  }
+}
+
 /* =======================================================
 Article 
 ======================================================= */
+
+.content-main {
+  overflow: hidden;
+}
 
 .content-main ul {
   list-style-position: outside;

@@ -32,7 +32,7 @@
   --link-lightness-hover: 0%;
 
   --border-saturation: 0%;
-  --border-lightness: 85%;
+  --border-lightness: 90%;
 
   --input-lightness-modifier: 10%;
   
@@ -56,6 +56,8 @@ header {
   --link-lightness: 80%;
   --link-saturation-hover: 0%;
   --link-lightness-hover: 10%;
+  --border-saturation: 15%;
+  --border-lightness: 35%;
   --input-lightness-modifier: -10%;
 
   @apply hsl-functions;
@@ -140,9 +142,17 @@ header .current-menu-item a {
   @apply font-bold;
 }
 
+header ul li {
+  @apply mb-2 lg:mb-0;
+}
+
 /* =======================================================
 Article 
 ======================================================= */
+
+.content-main {
+  @apply overflow-hidden;
+}
 
 .content-main ul {
   @apply pl-6 mb-1 list-outside list-square;

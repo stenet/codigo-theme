@@ -12,9 +12,14 @@
           <div class="fixed w-0 h-0 nav-main__background bg-bg"></div>
           <?php include(get_template_directory() . '/inc/sidebar-header-mobile.php');?>
           <div class="nav-main__filler"></div>
-          <div class="flex-grow hidden px-4 py-4 space-y-8 overflow-scroll text-xl lg:space-y-4 lg:text-base lg:px-6 nav-main lg:block lg:flex-grow-0 lg:py-0 lg:overflow-auto">
-            <?php include(get_template_directory() . '/inc/sidebar-icon.php');?>
-            <?php include(get_template_directory() . '/inc/sidebar-social.php');?>
+          <div class="flex-grow hidden px-4 py-4 space-y-8 overflow-scroll text-xl lg:space-y-8 lg:text-base lg:px-4 nav-main lg:block lg:flex-grow-0 lg:py-0 lg:overflow-auto">
+            <div class="lg:space-y-8">
+              <div class="hidden lg:block lg:space-y-8">
+                <?php include(get_template_directory() . '/inc/sidebar-icon.php');?>
+                <?php include(get_template_directory() . '/inc/sidebar-divider.php');?>
+              </div>
+              <?php include(get_template_directory() . '/inc/sidebar-social.php');?>
+            </div>
             <?php include(get_template_directory() . '/inc/sidebar-nav.php');?>
             <?php include(get_template_directory() . '/inc/search.php');?>
             <?php include(get_template_directory() . '/inc/sidebar-divider.php');?>

@@ -1,2 +1,2 @@
-<div class="h-px bg-input-border">
+<div class="h-px bg-border">
 </div>

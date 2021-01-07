@@ -65,10 +65,14 @@ class WcAccordion extends HTMLElement {
     
     this._contentContainer = document.createElement("div");
     outer.appendChild(this._contentContainer);
-    this._contentContainer.classList.add("overflow-y-hidden", "mt-2");
+    this._contentContainer.classList.add("overflow-y-hidden");
+
+    const innerContent = document.createElement("div");
+    this._contentContainer.appendChild(innerContent);
+    innerContent.classList.add("mt-2", "ml-2");
     
     while (this.childNodes.length > 0) {
-      this._contentContainer.appendChild(this.childNodes.item(0));
+      innerContent.appendChild(this.childNodes.item(0));
     }
     this.appendChild(outer);
     
