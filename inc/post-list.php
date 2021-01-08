@@ -1,4 +1,4 @@
-<div class="space-y-4 post-list">
+<div class="post-list">
   <?php if (have_posts()) : while(have_posts()) : the_post();?>
   <article class="overflow-x-hidden">
     <div class="mb-4 lg:flex">

@@ -1,5 +1,5 @@
 <div class="justify-center hidden lg:flex">
   <a href="/">
-    <img src="<?php site_icon_url(200);?>" width="200" height="200" style="width:200px;height:200px" alt>
+    <img src="<?php echo get_template_directory_uri() . "/assets/logo.png";?>" width="220" height="64" style="width:220px;height:64px" alt>
   </a>
 </div>

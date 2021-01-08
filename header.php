@@ -8,17 +8,17 @@
 
     <body <?php body_class();?> <?php get_body_style();?>>
       <div class="lg:max-w-6xl lg:mx-auto lg:flex">
-        <header class="sticky top-0 z-20 flex flex-col flex-none lg:w-1/4 lg:py-8 lg:min-h-screen lg:static bg-bg text-text">
+        <header class="sticky top-0 z-20 flex flex-col flex-none lg:w-1/4 lg:py-8 lg:min-h-screen lg:static lg:border-l lg:border-border bg-bg text-text">
           <div class="fixed w-0 h-0 nav-main__background bg-bg"></div>
           <?php include(get_template_directory() . '/inc/sidebar-header-mobile.php');?>
           <div class="nav-main__filler"></div>
-          <div class="flex-grow hidden px-4 py-4 -mt-12 space-y-8 overflow-scroll text-xl lg:mt-0 lg:space-y-8 lg:text-base lg:px-4 nav-main lg:block lg:flex-grow-0 lg:py-0 lg:overflow-auto">
+          <div class="flex-grow hidden px-4 py-4 -mt-12 space-y-8 overflow-scroll text-lg lg:mt-0 lg:space-y-8 lg:text-base lg:px-4 nav-main lg:block lg:flex-grow-0 lg:py-0 lg:overflow-auto">
             <?php include(get_template_directory() . '/inc/sidebar-icon.php');?>
-            <?php include(get_template_directory() . '/inc/sidebar-divider.php');?>
+            <div class="hidden h-px bg-border lg:block"></div>
             <?php include(get_template_directory() . '/inc/sidebar-social.php');?>
             <?php include(get_template_directory() . '/inc/sidebar-nav.php');?>
             <?php include(get_template_directory() . '/inc/search.php');?>
-            <?php include(get_template_directory() . '/inc/sidebar-divider.php');?>
+            <div class="h-px bg-border"></div>
             <?php include(get_template_directory() . '/inc/sidebar-categories.php');?>
             <?php include(get_template_directory() . '/inc/sidebar-tags.php');?>
             <?php include(get_template_directory() . '/inc/sidebar-archive.php');?>
