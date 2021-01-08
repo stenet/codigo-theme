@@ -124,36 +124,36 @@ export default class NavMobileHandler {
     let delay = 0;
 
     if (this._isVisible) {
-      const style: IAnimateOptions = {
-        element: el,
-        duration: animate ? undefined : 0,
-        before: {
-          display: "block",
-          opacity: 0
-        },
-        animate: {
-          opacity: 1
-        }
-      };
+      const styles: IAnimateOptions[] = [];
 
-      const childStyles = this.childIterator(this._navMainEl!, (child) => {
-        delay += 30;
+      if (animate) {
+        styles.push(...this.childIterator(this._navMainEl!, (child) => {
+          delay += 30;
+  
+          return {
+            element: child,
+            before: {
+              opacity: "0",
+              transform: "translateX(25px)"
+            },
+            animate: {
+              opacity: "1",
+              transform: "translateX(0)"
+            },
+            delay: delay
+          };
+        }));
+      }
 
-        return {
-          element: child,
+      styles.push({
+          element: el,
+          duration: 0,
           before: {
-            opacity: "0",
-            transform: "translateX(25px)"
-          },
-          animate: {
-            opacity: "1",
-            transform: "translateX(0)"
-          },
-          delay: delay
-        };
-      });
+            display: "block"
+          }
+        });
 
-      await AnimateUtils.animate([style, ...childStyles]);
+      await AnimateUtils.animate(styles);
     } else {
       const style: IAnimateOptions = {
         element: el,
