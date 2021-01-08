@@ -30268,10 +30268,17 @@ video {
 }
 
 header {
-  --link-saturation: 0%;
-  --link-lightness: 35%;
-  --link-saturation-hover: 20%;
-  --link-lightness-hover: 0%;
+  --bg-saturation: 15%;
+  --bg-lightness: 25%;
+  --text-saturation: 20%;
+  --text-lightness: 90%;
+  --link-saturation: 20%;
+  --link-lightness: 80%;
+  --link-saturation-hover: 0%;
+  --link-lightness-hover: 10%;
+  --border-saturation: 15%;
+  --border-lightness: 35%;
+  --input-lightness-modifier: -10%;
   --bg: hsl(var(--primary-hue), var(--bg-saturation), var(--bg-lightness));
   --text: hsl(var(--primary-hue), var(--text-saturation), var(--text-lightness));
   --header: hsl(var(--primary-hue), var(--header-saturation), var(--header-lightness));
@@ -30280,30 +30287,6 @@ header {
   --input: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) + var(--input-lightness-modifier)));
   --input-border: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
   --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - (var(--input-lightness-modifier) * 3)));
-}
-
-@media (min-width: 1024px) {
-  header {
-    --bg-saturation: 15%;
-    --bg-lightness: 25%;
-    --text-saturation: 20%;
-    --text-lightness: 90%;
-    --link-saturation: 20%;
-    --link-lightness: 80%;
-    --link-saturation-hover: 0%;
-    --link-lightness-hover: 10%;
-    --border-saturation: 15%;
-    --border-lightness: 35%;
-    --input-lightness-modifier: -10%;
-    --bg: hsl(var(--primary-hue), var(--bg-saturation), var(--bg-lightness));
-    --text: hsl(var(--primary-hue), var(--text-saturation), var(--text-lightness));
-    --header: hsl(var(--primary-hue), var(--header-saturation), var(--header-lightness));
-    --link: hsl(var(--link-hue), var(--link-saturation), var(--link-lightness));
-    --border: hsl(var(--primary-hue), var(--border-saturation), var(--border-lightness));
-    --input: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) + var(--input-lightness-modifier)));
-    --input-border: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
-    --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - (var(--input-lightness-modifier) * 3)));
-  }
 }
 
 /* =======================================================

@@ -48,29 +48,19 @@
   @apply hsl-functions;
 }
 header {
-  --link-saturation: 0%;
-  --link-lightness: 35%;
-  --link-saturation-hover: 20%;
-  --link-lightness-hover: 0%;
+  --bg-saturation: 15%;
+  --bg-lightness: 25%;
+  --text-saturation: 20%;
+  --text-lightness: 90%;
+  --link-saturation: 20%;
+  --link-lightness: 80%;
+  --link-saturation-hover: 0%;
+  --link-lightness-hover: 10%;
+  --border-saturation: 15%;
+  --border-lightness: 35%;
+  --input-lightness-modifier: -10%;
 
   @apply hsl-functions;
-}
-@screen lg {
-  header {
-    --bg-saturation: 15%;
-    --bg-lightness: 25%;
-    --text-saturation: 20%;
-    --text-lightness: 90%;
-    --link-saturation: 20%;
-    --link-lightness: 80%;
-    --link-saturation-hover: 0%;
-    --link-lightness-hover: 10%;
-    --border-saturation: 15%;
-    --border-lightness: 35%;
-    --input-lightness-modifier: -10%;
-  
-    @apply hsl-functions;
-  }
 }
 
 /* =======================================================
