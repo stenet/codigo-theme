@@ -10,7 +10,7 @@
   --border: hsl(var(--primary-hue), var(--border-saturation), var(--border-lightness));
   --input: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) + var(--input-lightness-modifier)));
   --input-border: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - var(--input-lightness-modifier)));
-  --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - (var(--input-lightness-modifier) * 3)));
+  --input-border-focus: hsl(var(--primary-hue), var(--bg-saturation), calc(var(--bg-lightness) - (var(--input-lightness-modifier) * 2)));
 }
 
 :root {
@@ -34,7 +34,7 @@
   --border-saturation: 0%;
   --border-lightness: 90%;
 
-  --input-lightness-modifier: 10%;
+  --input-lightness-modifier: 20%;
   
   --green: #4caf4f;
   --green-hue: 122;
