@@ -8,7 +8,7 @@
           <?php include(get_template_directory() . '/inc/post-date.php');?>
         </div>
       </div>
-      <div class="flex-grow -mt-2 lg:mt-6">
+      <div class="flex-grow -mt-2 lg:mt-5">
         <?php include(get_template_directory() . '/inc/post-category-tags.php');?>
       </div>
     </div>
