@@ -40,6 +40,7 @@ class WcInclude extends HTMLElement {
       this.parseLinks(content, "link", "href");
       this.parseLinks(content, "script", "src");
       this.parseLinks(content, "img", "src");
+      this.recreateScripts(content);
     }
 
     content.style.display = "none";
@@ -72,6 +73,19 @@ class WcInclude extends HTMLElement {
 
         el.setAttribute(attributeName, `${this._Href!}${link}`);
       });
+  }
+  private recreateScripts(content: HTMLElement) {
+    const scripts = Array.from(content.querySelectorAll("script"));
+
+    scripts.forEach(script => {
+      const parent = script.parentElement!;
+      parent.removeChild(script);
+
+      const newScript = document.createElement("script");
+      newScript.type = script.type;
+      newScript.src = script.src;
+      parent.appendChild(newScript);
+    });
   }
 }
 
