@@ -30398,8 +30398,21 @@ header .group {
   text-transform: uppercase;
 }
 
-header .current-menu-item a {
-  font-weight: 700;
+header .current-menu-item a, header .current-cat a {
+  position: relative;
+}
+
+header .current-menu-item a::before, header .current-cat a::before {
+  display: flex;
+  line-height: 1.5rem;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: -1rem;
+  vertical-align: middle;
+  content: "\f0da";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 /* =======================================================

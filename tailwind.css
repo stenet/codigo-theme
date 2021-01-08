@@ -138,8 +138,14 @@ header .group {
   @apply text-lg font-bold uppercase;
 }
 
-header .current-menu-item a {
-  @apply font-bold;
+header .current-menu-item a, header .current-cat a {
+  @apply relative;
+}
+header .current-menu-item a::before, header .current-cat a::before {
+  @apply absolute top-0 bottom-0 flex leading-6 align-middle -left-4;
+  content: "\f0da";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 /* =======================================================
