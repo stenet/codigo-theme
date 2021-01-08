@@ -244,7 +244,10 @@ Comments
 }
 
 .post-container button, .post-container input[type='button'], .post-container input[type='submit'] {
-  @apply px-6 py-3 text-xs font-bold text-white uppercase border rounded-md outline-none appearance-none cursor-pointer bg-link border-link;
+  @apply px-6 py-3 text-xs font-bold uppercase bg-transparent border rounded-md outline-none appearance-none cursor-pointer text-link border-link;
+}
+.post-container button:hover, .post-container input[type='button']:hover, .post-container input[type='submit']:hover {
+  --link: hsl(var(--link-hue), calc(var(--link-saturation) + var(--link-saturation-hover)), calc(var(--link-lightness) + var(--link-lightness-hover)));
 }
 
 .post-container label {
