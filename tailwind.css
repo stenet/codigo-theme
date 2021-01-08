@@ -131,10 +131,10 @@ header .nav-main__filler--active {
   @apply flex-grow;
 }
 header .nav-main.nav-main--top {
-  @apply sticky top-8;
+  @apply sticky top-10;
 }
 header .nav-main.nav-main--bottom {
-  @apply sticky bottom-8;
+  @apply sticky bottom-10;
 }
 
 header .button-social {

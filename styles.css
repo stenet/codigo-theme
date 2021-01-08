@@ -30387,12 +30387,12 @@ header .nav-main__filler--active {
 
 header .nav-main.nav-main--top {
   position: sticky;
-  top: 2rem;
+  top: 2.5rem;
 }
 
 header .nav-main.nav-main--bottom {
   position: sticky;
-  bottom: 2rem;
+  bottom: 2.5rem;
 }
 
 header .button-social {
