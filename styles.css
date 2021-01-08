@@ -30398,13 +30398,6 @@ header .group {
   text-transform: uppercase;
 }
 
-@media (min-width: 1024px) {
-  header .group {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
 header .current-menu-item a {
   font-weight: 700;
 }

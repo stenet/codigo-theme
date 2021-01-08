@@ -69,7 +69,7 @@ class WcAccordion extends HTMLElement {
 
     const innerContent = document.createElement("div");
     this._contentContainer.appendChild(innerContent);
-    innerContent.classList.add("mt-2", "ml-2");
+    innerContent.classList.add("mt-4", "ml-4");
     
     while (this.childNodes.length > 0) {
       innerContent.appendChild(this.childNodes.item(0));

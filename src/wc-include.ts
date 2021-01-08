@@ -38,7 +38,6 @@ class WcInclude extends HTMLElement {
       content.innerHTML = html;
   
       this.parseLinks(content, "link", "href");
-      this.parseLinks(content, "script", "src");
       this.parseLinks(content, "img", "src");
     }
 

@@ -135,7 +135,7 @@ header .button-social:hover {
 }
 
 header .group {
-  @apply text-lg font-bold uppercase lg:text-sm;
+  @apply text-lg font-bold uppercase;
 }
 
 header .current-menu-item a {
