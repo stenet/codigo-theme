@@ -9,20 +9,26 @@ export class AnimateUtils {
     const promises: Promise<void>[] = [];
 
     options.forEach(item => {
+      if (item.before) {
+        Object.assign(item.element.style, item.before);
+      }
+
+    });
+
+    options.forEach(item => {
       const delay = item.delay == undefined
         ? 0
         : item.delay;
-
       
-      if (item.delay == 0) {
+      if (delay == 0) {
+        promises.push(AnimateUtils.animateSingle(item));
+      } else {
         promises.push(new Promise((resolve) => {
           setTimeout(async () => {
             await AnimateUtils.animateSingle(item);
             resolve();
-          }, item.delay);
+          }, delay);
         }));
-      } else {
-        promises.push(AnimateUtils.animateSingle(item));
       }
     });
 
@@ -31,10 +37,6 @@ export class AnimateUtils {
   private static async animateSingle(options: IAnimateOptions) {
     if (options.duration == undefined) {
       options.duration = 200;
-    }
-
-    if (options.before) {
-      Object.assign(options.element.style, options.before);
     }
 
     if (options.duration > 0) {

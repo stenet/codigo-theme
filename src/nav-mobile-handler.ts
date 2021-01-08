@@ -4,7 +4,6 @@ import { SwipeHandler, SwipeDirection } from "./swipe-handler";
 export default class NavMobileHandler {
   private _headerEl: HTMLElement | null;
   private _navMainEl: HTMLElement | null;
-  private _navMainBgEl: HTMLElement | null;
   private _navMobileEl: HTMLElement | null;
   private _navMobilButtonEl: HTMLElement | undefined | null;
   private _navMobilIconEl: HTMLElement | undefined | null;
@@ -15,16 +14,12 @@ export default class NavMobileHandler {
   constructor() {
     this._headerEl = document.querySelector("header");
     this._navMainEl = document.querySelector(".nav-main");
-    this._navMainBgEl = document.querySelector(".nav-main__background");
     this._navMobileEl = document.querySelector(".nav-mobile");
     
     if (!this._headerEl) {
       return;
     }
     if (!this._navMainEl) {
-      return;
-    }
-    if (!this._navMainBgEl) {
       return;
     }
     if (!this._navMobileEl) {
@@ -109,8 +104,6 @@ export default class NavMobileHandler {
       : document.body.style.overflow = "";
 
     if (this._isVisible) {
-      await this.shrinkGrowCircle(x, y, animate);
-
       this._isVisible
         ? this._headerEl!.classList.add("mobile-nav--active")
         : this._headerEl!.classList.remove("mobile-nav--active");
@@ -122,54 +115,13 @@ export default class NavMobileHandler {
       this._isVisible
         ? this._headerEl!.classList.add("mobile-nav--active")
         : this._headerEl!.classList.remove("mobile-nav--active");
-
-      await this.shrinkGrowCircle(x, y, animate);
     }
 
     this.toggleNavIcon();
   }
-  private async shrinkGrowCircle(x: number, y: number, animate = true) {
-    const bg = this._navMainBgEl!;
-
-    if (this._isVisible) {
-      const style: IAnimateOptions = {
-        element: bg,
-        duration: animate ? 400 : 0,
-        before: {
-          top: `${y}px`,
-          left: `${x}px`,
-          opacity: "0",
-          width: "10px",
-          height: "10px",
-          borderRadius: "100%",
-          transform: "scale(0)"
-        },
-        animate: {
-          transform: `scale(${Math.round(Math.max(window.outerHeight, window.outerWidth) / 4)})`,
-          opacity: 1
-        }
-      };
-
-      await AnimateUtils.animate(style);
-    } else {
-      const style: IAnimateOptions = {
-        element: bg,
-        duration: animate ? 400 : 0,
-        animate: {
-          transform: "scale(0)",
-          opacity: 0
-        },
-        after: {
-          width: "0",
-          height: "0"
-        }
-      };
-
-      await AnimateUtils.animate(style);
-    }
-  }
   private async showHideNav(animate = true) {
     const el = this._navMainEl!;
+    let delay = 0;
 
     if (this._isVisible) {
       const style: IAnimateOptions = {
@@ -184,7 +136,24 @@ export default class NavMobileHandler {
         }
       };
 
-      await AnimateUtils.animate(style);
+      const childStyles = this.childIterator(this._navMainEl!, (child) => {
+        delay += 30;
+
+        return {
+          element: child,
+          before: {
+            opacity: "0",
+            transform: "translateX(25px)"
+          },
+          animate: {
+            opacity: "1",
+            transform: "translateX(0)"
+          },
+          delay: delay
+        };
+      });
+
+      await AnimateUtils.animate([style, ...childStyles]);
     } else {
       const style: IAnimateOptions = {
         element: el,
@@ -204,6 +173,29 @@ export default class NavMobileHandler {
 
       await AnimateUtils.animate(style);
     }
+  }
+  private childIterator(parent: HTMLElement, action: {(child: HTMLElement): IAnimateOptions}) : IAnimateOptions[] {
+    const result: IAnimateOptions[] = [];
+
+    Array.from(parent.children).forEach(child => {
+      if (!child.tagName) {
+        return;
+      }
+
+      const htmlChild = <HTMLElement>child;
+      if (htmlChild.style.display == "none") {
+        return;
+      }
+
+      const animateOptions = action(htmlChild);
+      if (!animateOptions) {
+        return;
+      }
+
+      result.push(animateOptions);
+    });
+
+    return result;
   }
   private toggleNavIcon() {
     const el = this._navMobilIconEl!;
