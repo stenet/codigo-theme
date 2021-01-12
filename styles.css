@@ -30340,7 +30340,7 @@ h3 {
   line-height: 1.75rem;
 }
 
-p, article > div {
+p, article > div, article > ul > li:last-child {
   margin-bottom: 1rem;
 }
 
@@ -30607,7 +30607,15 @@ Comments
 .post-container input[type='checkbox'] {
   -webkit-appearance: none;
           appearance: none;
-  border-color: var(--border);
+  background-color: var(--input);
+  border-color: var(--input-border);
+}
+
+.post-container input[type='checkbox']:focus {
+  border-color: var(--input-border-focus);
+}
+
+.post-container input[type='checkbox'] {
   border-radius: 0.25rem;
   border-width: 1px;
   height: 1.25rem;

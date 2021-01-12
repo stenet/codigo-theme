@@ -258,7 +258,7 @@ Comments
 }
 
 .post-container input[type='checkbox'] {
-  @apply w-5 h-5 border rounded appearance-none border-border;
+  @apply w-5 h-5 border rounded appearance-none bg-input border-input-border focus:border-input-border-focus;
 }
 .post-container input[type='checkbox']:checked {
   @apply bg-center bg-no-repeat bg-link;
