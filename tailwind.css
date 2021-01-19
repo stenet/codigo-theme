@@ -167,6 +167,13 @@ Article
   @apply mb-1;
 }
 
+.content-main ol {
+  @apply pl-6 mb-1 list-decimal list-outside;
+}
+.content-main ol > li {
+  @apply mb-1;
+}
+
 .content-main a:not(.superplain) {
   @apply font-medium;
 }

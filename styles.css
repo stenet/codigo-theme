@@ -30438,6 +30438,17 @@ Article
   margin-bottom: 0.25rem;
 }
 
+.content-main ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+  margin-bottom: 0.25rem;
+  padding-left: 1.5rem;
+}
+
+.content-main ol > li {
+  margin-bottom: 0.25rem;
+}
+
 .content-main a:not(.superplain) {
   font-weight: 500;
 }
